@@ -11,13 +11,12 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.A in Physics and Astrophysics University of California - Berkeley, 2020
+* A.A. in History and Liberal Arts, Cabrillo College, 2018
 
 Work experience
 ======
-* Summer 2015: Research Assistant
+*  8/2020-Current: 
   * Github University
   * Duties included: Tagging issues
   * Supervisor: Professor Git
