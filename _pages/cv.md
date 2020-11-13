@@ -9,14 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-#Education
+## Education
 
 **University of California, Berkeley**\
 B.A. in Physics & Astrophysics\
 **Cabrillo College**\
 Associates in History & Associates in Interdisciplinary Studies
 
-#Research\
+## Research
 **CNN-Halofinder: A Convolutional Neural Network for Creating Dark
 Matter Halo Catalogs**\
 Advisors: Dr. Chirag Modi, Dr. Vanessa Boehm, Dr. Uros Seljak\
@@ -35,9 +35,9 @@ Research Group: Berkeley Center for Cosmological Physics\
 **Investigating and Mitigating the Temporal Structure of Redundant
 Baseline Calibration Solutions**\
 Advisors: Dr. Joshua Dillon, Dr. Aaron Parsons\
-Research Group: Hydrogen Epoch of Reionization Array\
+Research Group: Hydrogen Epoch of Reionization Array
 
-#Teaching and Outreach\
+## Teaching and Outreach
 **Course Reader** - Introduction to Mathematical
 Physics\
 **Course Reader** - Stellar Astrophysics\
@@ -46,8 +46,8 @@ transfer students\
 **Research Mentor** - ULAB 21 cm Cosmology Group\
 **Student Instructor** - Foundational course for physical science
 transfer students\
-**Course Reader**- Introductory Mechanics\
+**Course Reader**- Introductory Mechanics
 
-#Awards\
-**Ted Bowen Memorial Endowed Scholarship**\
+## Awards
+Ted Bowen Memorial Endowed Scholarship
 

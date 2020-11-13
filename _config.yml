@@ -48,7 +48,6 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -85,7 +84,7 @@ author:
   bio              : "Wrapping up my undergraduate education at UC Berkeley and excited to pursue a Ph.D. in Astronomy!"
   location         : "Berkeley, California"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=uMFX5KsAAAAJ&view_op=list_works&gmla=AJsN-F64ZVvXfmrYy8n9HbSInYwSqGTbGOY-YNoibbTrazAZudQX9DdF4oEuGaLXf8YdbJ9iBrFhs1LAfz60AoZbrCt_RrjjSw"
   email            : "maxleeastronomy@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -181,7 +180,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  projects:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -227,10 +226,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _projects
   - scope:
       path: ""
-      type: portfolio
+      type: projects
     values:
       layout: single
       author_profile: true
