@@ -13,9 +13,9 @@
                       <a href="#home">Home</a>
                       <a href="#about">About</a>
                       <a href="#projects">Projects</a>
+                      <a href="#past_projects">Miscellaneous Physics</a>
                       <a href="#publications">Publications</a>
-                      <a href="#past_projects">Past Projects</a>
-                      <a href="pdfs/cv.pdf">CV</a>
+                      <a href="pdfs/Cv.pdf">CV</a>
               </div>
 
                   <div class="header-img" ></div>
@@ -56,7 +56,7 @@
                   <img id="conv" src="img/project_images/conv_pretty.png" alt="conv" align="left" width=600, style="padding: 30px; margin:2px;"/>
           I have dedicated the majority of my time to working with <a href="https://vmboehm.github.io">Dr. Vanessa Boehm</a> and <a href="http://rainwoodman.github.io/website/index.html">Dr. Yu Feng</a> at the <a href="http://bccp.berkeley.edu">Berkeley Center for Cosmological Physics</a> working on the development of a weak gravitational lensing simulation that is fully differentiable with respect to cosmological parameters and initial density modes. This is an incredibly exciting project that
           allows for cosmological parameter estimates from upcoming surveys like <a href="https://www.euclid-ec.org">Euclid</a>
-          and <a href="lsst.org">LSST</a>. With stage IV surveys comes unprecedented accuracy in measurements, requiring a models that can match this accuracy, and methods of parameter estimation that use the full information content of the survey. This has been a notorious problem for weak gravitational lensing by cosmic shear. In general, cosmic shear measures the correlation between distortions of galaxies due to gravitational deflections. With these correlations one can extract the
+          and <a href="http://lsst.org">LSST</a>. With stage IV surveys comes unprecedented accuracy in measurements, requiring a models that can match this accuracy, and methods of parameter estimation that use the full information content of the survey. This has been a notorious problem for weak gravitational lensing by cosmic shear. In general, cosmic shear measures the correlation between distortions of galaxies due to gravitational deflections. With these correlations one can extract the
           projected matter density field along a line of sight, which is almost magical, but for this analysis to be practical general approximation are made. The most notorious is that the cosmic shear field can be considered gaussian, and fully described by its power spectrum and two point correlation functions. This is not the case, Just look at the convergence map to the left! This is an output simulated by MADLens, theres clearly non-gaussian structure (see the clustinring areas,
           the nulls and voids). There has been work to incorperate higher order statistics such as the angular bispectrum, trispectrum, etc. Alternative methods to extract information has
           arisen, and there are promising results using peak counts, peak nulls, minkowski functionals, at infinitum, but all of them lack consideration of the full, non-gaussian field. 
@@ -64,12 +64,29 @@
           <p>
               MADLens bridges this gap by accurately simulating the full cosmic shear field using a highly parallelized Nbody simulation code <a href="https://github.com/rainwoodman/fastpm-python/tree/master/fastpm">fastPM</a>, incorperating small scale baryonic effects using a parameterization (Potential Gradient Descent) which has been trained on high resolution hydrodynamical simulations, using an interpolation method to sharpen the accuracy between simulation steps, and on top of all of that... It is written in an automated differentiation
               architecture allowing for the derivative of the entire simulation. The end goal is to use the gradient of the simulation in tandem with gradient based optimization methods (such as Hamiltonian Mone Carlo Methods, or Maximum A Posteriori estimates) on stage four survey data to find accurate cosmological parameter estimates. 
-              <h2> HERA </h2>  
+              <h2> HERA </h2> 
+              <div stle="float:right;">
+              <img id="hera" src="img/project_images/gains_vs_lst.png" alt="gains" align="right" width=600 height=300 style="padding: 10px; margin:5px;"/>
+              </div>
+              <p>
+                  I Have been working for the past two years with the <a href="https://reionization.org">Hydrogen Epoch of Reionization Array</a> which is a raio interferometer working to observe 21-cm emissions from the early universe. Specifically, The experiment is searching for traces of the first stars, galaxies, blackholes, everything we know to exist in our universe! I work with Dr. <a href="https://joshdillon.net">Josh Dillon</a> and Prof. <a href="http://w.astro.berkeley.edu/~aparsons/Aaron_Parsons/Home.html">Aaron Parsons</a> on foreground
+                  mitigation, and calibration debugging. One of the toughest parts of EoR experiments is reducing all of the foregrounds. In fact these foregrounds are often upto five orders of magnitude brighter than the EoR signal to begin with meaning the experiment is literally trying to find a needle in a haystack. Luckily methods of calibration have been developed to account (or try to) for this, and HERA uses a Redundant-Baseline Calibration scheme which leverages properties of
+                  interferometers when they are equidistant, or redundant. In practice creating perfectly redundant baselines is near impossible, and I have spent a great deal of time investigating the effect of non-redundancy in redundant baselines. Specifically I have looked at the structure in calibration solutions as a function of time and found that the non-redundancy tied together with bright radio sources (like Fornax-A) cause time locked variations, which negatively
+                  impacts the calibration process. We were able to show this, and find a smoothing timescale that works to mitigate this effect in <a href="http://w.astro.berkeley.edu/~aparsons/Aaron_Parsons/Home.html">this publication</a>. We have most recently been working on the development and analysis of fringe-rate filters, which are fourier space filters that act in the time domain, to effectively shape the beam profile and smooth the structure of calibrations. 
+              </br>
         <hr>
           <div class="past_projects" id="past_projects">
               <h1>Miscellaneous Physics</h1>
-              <h2>The Galaxy is... Warped?</h2>
-              <img src="img/project_images/warp.png" width="700px" height="300px"/>
+              <a href="pdfs/Lab_4.pdf"><h2>The Galaxy is... Warped?</h2></a>
+              <div style="float:left; margin:5px;">
+              <img src="img/project_images/warp.png" width="700px" height="300px" style="padding:15px;"/>
+              </div>
+              <p>
+              The universe is filled with mostly hydrogen, and out own galaxy is no exception. Throughout the Milky Way are regions of neutral hydrogen clustering together due to their gravitational interactions. Where there is neutral hydrogen, there is the chance of 21-cm hydrogen emissions where the spin allignment of the proton and electron switch from alligned to anti-aligned, releasing a 21-cm wavelength. Radio Astronomy allows for the detection of these long
+              wavelengths! In a Radio Astronomy Lab under the guidance of Aaron Parsons, I used the Leuschner Radio Telescope to map the H1 emissions from the plane of the milky way, slightly above, slightly below, and all the way around. With these Observations, I was able to use the doppler shifts in their wavelengths to determine the distance, temperature, veloity, and column density of the clouds. This let me make a map of the hydrogen clouds in our home galaxy and show that not only
+              is there spiral structure to the Milky Way, but that there is an apparant warp! This is a known phenomenah, though astronomers still dont know why there is a warp. It is evident in other galaxys though, that a "Pringle" shape or "Fedora" shape emerges in spiral galaxies. In the plot on the left, you can see that when differencing measurements made above the galactic plane, and below the galactic plane, there is a clear "red" region at a range of galactic longitudes, while at
+              others, there is a clear blue region! This is direct evidence that the Milky Way is shaped like a Fedora! or a Pringle! Yummy!
+              </p>
               <h2>Chaos! It's Chaos I Tell You</h2>
               <div style="float:right; margin:10px;">
               <video width="700px" height="400px" controls loop ><source src="img/duffing.mp4"/></video>
@@ -81,8 +98,15 @@
                 <p>
                     This Poincare section (or multiple sections) are rich in information content and description. One of the cooler aspects is that they are Fractals! If we zoom in on a portion of the Poincare section we find that there is an infinit number of line that never cross. We can keep zooming in and in and in and we will always find infinite non crossing lines. Though... We cant simulate that much infinity, so the scatter will have to do.
               <h2>How Big is the Sun, Really?</h2>
-              <img src="img/project_images/solar_rad.png" width="700px" height="500px"/>
+              <div style="float:left; margin:10px'">
+              <img src="img/project_images/solar_rad.png" width="500px" height="300px" style="padding:20px;"/>
+              </div>
+              <p> One of the "wait but how?" moments in my life was thinking about the size of the sun. How do we know the radius, mass, properties in general? In my introductory astronomy class this bugged me alot. I had not learned about how observations work or how these quantities are discovered. I had the opportunity two years later to use a radio interferometer at UC Berkeley to precisely measure the radius of the sun and answer this question once and for all. With a group of budding
+                  radio astronomers, we used a two dish radio interferometer to track the motion of the sun through out a full day. Interferometers work because of a geometric delay between light travel distance, and with knowledge of this distance difference and properties of electromagnetic waves, we were able to extract the the solar radius from our observations! In the plot to the right we show the real data of the suns motion through out a day, and a fitted curve which
+                  envelopes this motion. Through this fitting process we found the parameter to describe the envelope and it turns out to be exactly the solar radius. I was finally able to answer the questions from my past. In fact our value turned out to be incredibly competitive with the most recent and accurate measurements of the solar radius! Interferometry in general is great at measuring distances and one cool thing I learned through this project, is that interferometry is often
+                  the method used to calculate the continental drifts.
           </div>
+
           <hr>
           <div class="publications" id="publications">
               <h1>Publications & Other Writing</h1>
@@ -96,7 +120,6 @@
               <sup id="fn1"><a href="#ref1" title="non-peer reviewed">1</a> [Not Peer Reviewed]</sup><br>
               <sup id="fn2"><a href="#ref2" title="poster">2</a> [Poster]</sup>
           </div>
-
 
       <script>
 
