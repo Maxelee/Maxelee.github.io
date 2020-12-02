@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head class="header">
+    <title>Max Lee</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+
+      <header class="home" id="home">
+              <div id="navbar">
+                      <a class="active" href="javascript:void(0)"></a>
+                      <a href="#home">Home</a>
+                      <a href="#about">About</a>
+                      <a href="#projects">Projects</a>
+                      <a href="#publications">Publications</a>
+                      <a href="#past_projects">Past Projects</a>
+                      <a href="pdfs/cv.pdf">CV</a>
+              </div>
+
+                  <div class="header-img" ></div>
+      </header>
+      <main>
+      <div class="wrapper">
+
+          <div class="about" id="about">
+                  <img id="face" src="img/headshot_max.png" alt="face" align="right" width=280>
+              <h1> Hi! I'm Max Lee  </h1>
+              <p>
+              I am a graduating astrophysics and physics double major at the UC Berkeley. I research the structure and evolution of the universe using weak gravitational lensing. I am particularly interested in understanding what model best describes the universes evolution and what parameters describe that model! I have worked on this problem with Vanessa Boehm and the Berkeley Center for Cosmological Physics by building a differentiable weak gravitational lensing simulation
+              MADLens. <br><br>On the experimental side, I work with the Hydrogen Epoch of Reionization Array (HERA) which is a 21-cm experiment searching for information about the first energy emitting sources to form. I have worked with Josh Dillon and Aaron Parsons to analyze the effectivity of the calibration scheme, and have helped diagnose and mitigate issues that have arrised. I love being a part of a team effort to accomplish a great feat of science, and enjoy the opportunity to
+              analyze data straight from the telescope!
+              </p>
+
+          </div>
+          <hr>
+          <div class="projects" id="projects">
+<!--              <h1>Current Projects</h1>
+              <div class="row" style="text-align:center;">
+                  <div class="column">
+                      <h3>Temporal Structure in Redcal</h3>
+                      <a href="tsr.html"> <img src=img/project_images/gains_vs_lst.png alt='gains' width=90% height=300></a>
+                  </div>
+                  <div class="column">
+                      <h3>Weak Gravitational Lensing</h3>
+                      <img src=img/project_images/lensing_map.png alt='convergence map' width=90% height=300>
+                  </div>
+                  <div class="column">
+                      <h3>Fringe-Rate Filtering</h3>
+                  </div>
+            </div>
+          </div>-->
+          <h1>Current Projects</h1>
+          <h2> MADLens </h2>
+          <p>
+                  <img id="conv" src="img/project_images/conv_pretty.png" alt="conv" align="left" width=600, style="padding: 30px; margin:2px;"/>
+          I have dedicated the majority of my time to working with <a href="https://vmboehm.github.io">Dr. Vanessa Boehm</a> and <a href="http://rainwoodman.github.io/website/index.html">Dr. Yu Feng</a> at the <a href="http://bccp.berkeley.edu">Berkeley Center for Cosmological Physics</a> working on the development of a weak gravitational lensing simulation that is fully differentiable with respect to cosmological parameters and initial density modes. This is an incredibly exciting project that
+          allows for cosmological parameter estimates from upcoming surveys like <a href="https://www.euclid-ec.org">Euclid</a>
+          and <a href="lsst.org">LSST</a>. With stage IV surveys comes unprecedented accuracy in measurements, requiring a models that can match this accuracy, and methods of parameter estimation that use the full information content of the survey. This has been a notorious problem for weak gravitational lensing by cosmic shear. In general, cosmic shear measures the correlation between distortions of galaxies due to gravitational deflections. With these correlations one can extract the
+          projected matter density field along a line of sight, which is almost magical, but for this analysis to be practical general approximation are made. The most notorious is that the cosmic shear field can be considered gaussian, and fully described by its power spectrum and two point correlation functions. This is not the case, Just look at the convergence map to the left! This is an output simulated by MADLens, theres clearly non-gaussian structure (see the clustinring areas,
+          the nulls and voids). There has been work to incorperate higher order statistics such as the angular bispectrum, trispectrum, etc. Alternative methods to extract information has
+          arisen, and there are promising results using peak counts, peak nulls, minkowski functionals, at infinitum, but all of them lack consideration of the full, non-gaussian field. 
+          </p>
+          <p>
+              MADLens bridges this gap by accurately simulating the full cosmic shear field using a highly parallelized Nbody simulation code <a href="https://github.com/rainwoodman/fastpm-python/tree/master/fastpm">fastPM</a>, incorperating small scale baryonic effects using a parameterization (Potential Gradient Descent) which has been trained on high resolution hydrodynamical simulations, using an interpolation method to sharpen the accuracy between simulation steps, and on top of all of that... It is written in an automated differentiation
+              architecture allowing for the derivative of the entire simulation. The end goal is to use the gradient of the simulation in tandem with gradient based optimization methods (such as Hamiltonian Mone Carlo Methods, or Maximum A Posteriori estimates) on stage four survey data to find accurate cosmological parameter estimates. 
+              <h2> HERA </h2>  
+        <hr>
+          <div class="past_projects" id="past_projects">
+              <h1>Miscellaneous Physics</h1>
+              <h2>The Galaxy is... Warped?</h2>
+              <img src="img/project_images/warp.png" width="700px" height="300px"/>
+              <h2>Chaos! It's Chaos I Tell You</h2>
+              <div style="float:right; margin:10px;">
+              <video width="700px" height="400px" controls loop ><source src="img/duffing.mp4"/></video>
+              </div>
+            <p> For a class project, I investigated introductory non-linear dynamics and chaos theory. I found it to be fascinating, and found the geometric approach to understanding chaos to be perfect for me. I love to visualize things, and mess around with the buttons and see how it changes results. I gave a presentation to my professors on chaos theory, and developed a number of simulations of chaotic systems along the way. I brought some of the highlights here. First up is the duffing
+                oscillator which models a spring, if the spring doesnt strictly obey Hookes law. It's pretty much a nonlinear spring. The system is a great example and introduction into Strange Attractors, where the trajectory in phase space is chaotic, but the system tends to move chaoticly on some surface... Well, if you take a slice of the systems trajectory and then take another slice right next to it, and another, and etc... you get a series of Poincare plots. When Animated, they become a
+                pretty picture!
+                </p>
+                <p>
+                    This Poincare section (or multiple sections) are rich in information content and description. One of the cooler aspects is that they are Fractals! If we zoom in on a portion of the Poincare section we find that there is an infinit number of line that never cross. We can keep zooming in and in and in and we will always find infinite non crossing lines. Though... We cant simulate that much infinity, so the scatter will have to do.
+              <h2>How Big is the Sun, Really?</h2>
+              <img src="img/project_images/solar_rad.png" width="700px" height="500px"/>
+          </div>
+          <hr>
+          <div class="publications" id="publications">
+              <h1>Publications & Other Writing</h1>
+              <ol>
+                  <li><strong>V. Bohm, Y. Feng, M. Lee, B. Dai</strong> <i>MADLens: Package for Fast and Differentiable Non-Gaussian Lensing Simulations</i>. In Prep </li>
+                  <li><strong>J.S. Dillon, M. Lee, A.R. Parsons, et al.</strong> <i>Redundant-Baseline Calibration of the Hydrogen Epoch of Reioniztion Array</i>. Published MNRS 11-02-2020: <a href="https://arxiv.org/abs/2003.08399https://arxiv.org/abs/2003.08399">arXiv:2003.08399</a></li>
+                  <li><sup><a href="#fn1" id="ref1">1</a></sup><strong>M. Lee and J.S. Dillon</strong>,<a href="http://reionization.org/wp-content/uploads/2013/03/HERA072_Calibration_Temporal_Structure_Memo.pdf"><i>Memo #72: Explaining and Mitigating the Temporal Structure of Calibration Solutions</i></a>, 09-2019</li>
+                  <li><sup><a href=#fn2" id="ref2">2</a><strong>M. Lee, J.S. Dillon, A.R. Parsons</strong><a href="pdfs/poster1.pdf"><i>Explaining the Temporal Structure in HERA's Redundant Calibration Solutions</i></a> Astronomy Poster Summer Intern Symposium, Berkeley, CA, 8-2019</li>
+
+              </ol>
+              <sup id="fn1"><a href="#ref1" title="non-peer reviewed">1</a> [Not Peer Reviewed]</sup><br>
+              <sup id="fn2"><a href="#ref2" title="poster">2</a> [Poster]</sup>
+          </div>
+
+
+      <script>
+
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+
+            // Get the navbar
+            var navbar = document.getElementById("navbar");
+
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+      </script>
+      </div>
+      </main>
+  </body>
+  <footer>
+  &copy;2020 Max Lee
+</footer>
+</html>
