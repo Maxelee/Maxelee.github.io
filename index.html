@@ -27,11 +27,10 @@
                   <img id="face" src="img/headshot_max.png" alt="face" align="right" width=280>
               <h1> Hi! I'm Max Lee  </h1>
               <p>
-              I am a graduating astrophysics and physics double major at the UC Berkeley. I research the structure and evolution of the universe using weak gravitational lensing. I am particularly interested in understanding what model best describes the universes evolution and what parameters describe that model! I have worked on this problem with Vanessa Boehm and the Berkeley Center for Cosmological Physics by building a differentiable weak gravitational lensing simulation
-              MADLens. <br><br>On the experimental side, I work with the Hydrogen Epoch of Reionization Array (HERA) which is a 21-cm experiment searching for information about the first energy emitting sources to form. I have worked with Josh Dillon and Aaron Parsons to analyze the effectivity of the calibration scheme, and have helped diagnose and mitigate issues that have arrised. I love being a part of a team effort to accomplish a great feat of science, and enjoy the opportunity to
-              analyze data straight from the telescope!
+              I am a graduating astrophysics and physics double major at the UC Berkeley and am broadly interested in cosmology. Of particular interest is, understanding what model best describes the universes evolution and what parameters describe that model! This interest has led me to work with Dr. Vanessa Boehm and the Berkeley Center for Cosmological Physics by building a differentiable weak gravitational lensing simulation
+              MADLens, which will be discussed in an upcoming paper. <br><br>On the experimental side, I work with the Hydrogen Epoch of Reionization Array (HERA) which is a 21-cm experiment searching for information about the first energy emitting sources to form in the universe. Together with Dr. Josh Dillon and Prof. Aaron Parsons I have been analyzing the effectivity of HERA's redundant-baseline calibration scheme, and have helped diagnose and mitigate issues that have arrised. It
+              has been exciting to take part in a team effort working at the frontlines of cosmology experimentation, and to analyze data strainght from the telescope!             
               </p>
-
           </div>
           <hr>
           <div class="projects" id="projects">
@@ -54,16 +53,17 @@
           <h2> MADLens </h2>
           <p>
                   <img id="conv" src="img/project_images/conv_pretty.png" alt="conv" align="left" width=600, style="padding: 30px; margin:2px;"/>
-          I have dedicated the majority of my time to working with <a href="https://vmboehm.github.io">Dr. Vanessa Boehm</a> and <a href="http://rainwoodman.github.io/website/index.html">Dr. Yu Feng</a> at the <a href="http://bccp.berkeley.edu">Berkeley Center for Cosmological Physics</a> working on the development of a weak gravitational lensing simulation that is fully differentiable with respect to cosmological parameters and initial density modes. This is an incredibly exciting project that
+         For the past year, I have been collaborating with <a href="https://vmboehm.github.io">Dr. Vanessa Boehm</a> and <a href="http://rainwoodman.github.io/website/index.html">Dr. Yu Feng</a> at the <a href="http://bccp.berkeley.edu">Berkeley Center for Cosmological Physics</a> in developing a weak gravitational lensing simulation that is fully differentiable with respect to cosmological parameters and initial density modes. This is an incredibly exciting project that
           allows for cosmological parameter estimates from upcoming surveys like <a href="https://www.euclid-ec.org">Euclid</a>
-          and <a href="http://lsst.org">LSST</a>. With stage IV surveys comes unprecedented accuracy in measurements, requiring a models that can match this accuracy, and methods of parameter estimation that use the full information content of the survey. This has been a notorious problem for weak gravitational lensing by cosmic shear. In general, cosmic shear measures the correlation between distortions of galaxies due to gravitational deflections. With these correlations one can extract the
+          and <a href="http://lsst.org">LSST</a>. With stage IV surveys comes unprecedented numbers of measurements and accuracy in measurements. This means cosmologists must develop models that can match this accuracy if we want to fully utilize the information content. This has been a notorious problem for weak gravitational lensing by cosmic shear. In general, cosmic shear measures the correlation between distortions of galaxies due to gravitational deflections. With these correlations one can extract the
           projected matter density field along a line of sight, which is almost magical, but for this analysis to be practical general approximation are made. The most notorious is that the cosmic shear field can be considered gaussian, and fully described by its power spectrum and two point correlation functions. This is not the case, Just look at the convergence map to the left! This is an output simulated by MADLens, theres clearly non-gaussian structure (see the clustinring areas,
           the nulls and voids). There has been work to incorperate higher order statistics such as the angular bispectrum, trispectrum, etc. Alternative methods to extract information has
           arisen, and there are promising results using peak counts, peak nulls, minkowski functionals, at infinitum, but all of them lack consideration of the full, non-gaussian field. 
           </p>
           <p>
               MADLens bridges this gap by accurately simulating the full cosmic shear field using a highly parallelized Nbody simulation code <a href="https://github.com/rainwoodman/fastpm-python/tree/master/fastpm">fastPM</a>, incorperating small scale baryonic effects using a parameterization (Potential Gradient Descent) which has been trained on high resolution hydrodynamical simulations, using an interpolation method to sharpen the accuracy between simulation steps, and on top of all of that... It is written in an automated differentiation
-              architecture allowing for the derivative of the entire simulation. The end goal is to use the gradient of the simulation in tandem with gradient based optimization methods (such as Hamiltonian Mone Carlo Methods, or Maximum A Posteriori estimates) on stage four survey data to find accurate cosmological parameter estimates. 
+              architecture allowing for the derivative of the entire simulation. The end goal is to use the gradient of the simulation in tandem with gradient based optimization methods (such as Hamiltonian Mone Carlo Methods, or Maximum A Posteriori estimates) on stage four survey data to find accurate cosmological parameter estimates. I have recently submitted an application for the NSF Graduate Research Fellowship Program proposing to use MADLens for parameter estimation which  you are
+              welcome to read about <a href="pdfs/NSF_Research_Proposal.pdf">here</a>!
               <h2> HERA </h2> 
               <div stle="float:right;">
               <img id="hera" src="img/project_images/gains_vs_lst.png" alt="gains" align="right" width=600 height=300 style="padding: 10px; margin:5px;"/>
@@ -97,7 +97,7 @@
                 </p>
                 <p>
                     This Poincare section (or multiple sections) are rich in information content and description. One of the cooler aspects is that they are Fractals! If we zoom in on a portion of the Poincare section we find that there is an infinit number of line that never cross. We can keep zooming in and in and in and we will always find infinite non crossing lines. Though... We cant simulate that much infinity, so the scatter will have to do.
-              <h2>How Big is the Sun, Really?</h2>
+                    <a href="pdfs/Lab_3.pdf"><h2>How Big is the Sun, Really?</h2></a>
               <div style="float:left; margin:10px'">
               <img src="img/project_images/solar_rad.png" width="500px" height="300px" style="padding:20px;"/>
               </div>
@@ -112,7 +112,7 @@
               <h1>Publications & Other Writing</h1>
               <ol>
                   <li><strong>V. Bohm, Y. Feng, M. Lee, B. Dai</strong> <i>MADLens: Package for Fast and Differentiable Non-Gaussian Lensing Simulations</i>. In Prep </li>
-                  <li><strong>J.S. Dillon, M. Lee, A.R. Parsons, et al.</strong> <i>Redundant-Baseline Calibration of the Hydrogen Epoch of Reioniztion Array</i>. Published MNRS 11-02-2020: <a href="https://arxiv.org/abs/2003.08399https://arxiv.org/abs/2003.08399">arXiv:2003.08399</a></li>
+                  <li><strong>J.S. Dillon, M. Lee, A.R. Parsons, et al.</strong> <i>Redundant-Baseline Calibration of the Hydrogen Epoch of Reioniztion Array</i>. Published MNRS 11-02-2020: <a href="https://arxiv.org/abs/2003.08399">arXiv:2003.08399</a></li>
                   <li><sup><a href="#fn1" id="ref1">1</a></sup><strong>M. Lee and J.S. Dillon</strong>,<a href="http://reionization.org/wp-content/uploads/2013/03/HERA072_Calibration_Temporal_Structure_Memo.pdf"><i>Memo #72: Explaining and Mitigating the Temporal Structure of Calibration Solutions</i></a>, 09-2019</li>
                   <li><sup><a href=#fn2" id="ref2">2</a><strong>M. Lee, J.S. Dillon, A.R. Parsons</strong><a href="pdfs/poster1.pdf"><i>Explaining the Temporal Structure in HERA's Redundant Calibration Solutions</i></a> Astronomy Poster Summer Intern Symposium, Berkeley, CA, 8-2019</li>
 
