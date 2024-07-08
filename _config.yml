@@ -21,9 +21,9 @@ repository               : "Maxelee/Maxelee.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "selfie.png"
   name             : "Max E. Lee"
-  pronouns         : "He/Him" # example: "she/her"  
+  pronouns         : "He/Him" 
   bio              : "PhD Candidate at Columbia University"
   location         : "Earth"
   employer         : "Columbia University"
