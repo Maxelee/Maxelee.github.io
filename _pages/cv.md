@@ -51,4 +51,8 @@ Teaching
   
 Service and leadership
 ======
-* 
+* STEM Coach - Columbia school of General Studies (1/2024-6/2024)
+* Astronomy youth outreach coordinator - Columbia Dept. of Astronomy (8/2023 - Current) 
+* Undergraduate Mentor - Foundational Course for Physical Science Transfers at UC Berkeley (5/2020 - 12/2020)
+* Research Mentor - ULAB 21cm Cosmology Group UC Berkeley (8/2019 -  5/2020)
+* Undergraduate Mentor - Foundational Course for Physical Science Transfers at UC Berkeley (5/2019 - 12/2019)
