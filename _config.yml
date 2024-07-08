@@ -12,7 +12,7 @@ title                    : "Max E. Lee"
 title_separator          : "-"
 name                     : &name "Max E. Lee"
 description              : &description "Staring at simulations and stars"
-url                      : https://Maxelee.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://Maxelee.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Maxelee/Maxelee.github.io"
 
@@ -23,11 +23,11 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Max E. Lee"
-  pronouns         : He/Him# example: "she/her"  
+  pronouns         : "He/Him" # example: "she/her"  
   bio              : "Staring at simulations and stars"
   location         : "Earth"
   employer         : "Columbia University"
-  uri              : "Maxelee.github.io"# URL
+  uri              : "Maxelee.github.io" # URL
   email            : "max.e.lee@columbia.org" 
 
   # Academic websites
