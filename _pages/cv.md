@@ -17,10 +17,10 @@ Education
 
 Awards
 ======
-Columbia Center for Teaching and Learning Lead Teaching Fellowship (2024-2025)
-National Osterbrock Leadership Fellowship (2023-2025)
-NSF Graduate Research Fellowship (2022 - 2028)
-Ted Bowen Memorial Endowed Scholarship (2018)
+* Columbia Center for Teaching and Learning Lead Teaching Fellowship (2024-2025)
+* National Osterbrock Leadership Fellowship (2023-2025)
+* NSF Graduate Research Fellowship (2022 - 2028)
+* Ted Bowen Memorial Endowed Scholarship (2018)
   
 <!-- Skills
 ======
