@@ -1,92 +1,62 @@
 ---
 permalink: /
-title: "Hi, I'm Max!"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-<div class="hero-section">
-  <div class="hero-content">
-    <h1>Max E. Lee</h1>
-    <div class="hero-subtitle">Cosmologist &middot; Computational Astrophysicist &middot; Educator</div>
-    <p class="hero-tagline">
-      I build bridges between hydrodynamical simulations and cosmological surveys to understand the universe's large-scale structure. Currently a PhD candidate at Columbia University.
-    </p>
-    <div class="hero-badges">
-      <span class="hero-badge"><i class="fas fa-award"></i> NSF Graduate Research Fellow</span>
-      <span class="hero-badge"><i class="fas fa-star"></i> Osterbrock Leadership Fellow</span>
-      <span class="hero-badge"><i class="fas fa-chalkboard-teacher"></i> CTL Lead Teaching Fellow</span>
-    </div>
-    <a href="/publications/" class="cta-btn"><i class="fas fa-file-alt"></i> View My Research</a>
-  </div>
+I am a PhD candidate in Astronomy at [Columbia University](https://www.astro.columbia.edu/), advised by [Zoltán Haiman](http://user.astro.columbia.edu/~zoltan/) and [Shy Genel](https://users.flatironinstitute.org/~sgenel/). I am an NSF Graduate Research Fellow, an AAS National Osterbrock Leadership Fellow, and a Columbia CTL Lead Teaching Fellow.
+
+My research focuses on connecting hydrodynamical simulations to cosmological survey analyses, with a particular emphasis on **weak gravitational lensing**. I develop methods to extract information from simulations — including non-Gaussian statistics, reduced-variance emulation techniques, and baryon correction models — to prepare for upcoming surveys by LSST, *Euclid*, and *Roman*.
+
+Before graduate school, my path was nonlinear: I spent years traveling, working on organic farms, and managing environmental non-profit offices before returning to [Cabrillo Community College](https://www.cabrillo.edu/) and then transferring to [UC Berkeley](https://astro.berkeley.edu/) (B.A. in Physics and Astronomy, 2020).
+
+---
+
+## Selected Publications
+
+<div class="pub-list">
+
+<div class="pub-entry">
+<span class="pub-title"><a href="/publication/2026-03-12-BaryonMassRadius">The impact of baryons on weak lensing statistics as a function of halo mass and radius</a></span><br>
+<span class="pub-authors">M. E. Lee, Z. Haiman, S. Genel</span><br>
+<span class="pub-detail">arXiv:2603.11815, 2026</span>
+&middot; <a href="https://arxiv.org/abs/2603.11815">arXiv</a>
 </div>
 
-<h2 class="section-heading"><i class="fas fa-microscope"></i> Research Interests</h2>
-
-<div class="research-grid">
-  <div class="research-card">
-    <div class="card-icon">🌌</div>
-    <h3>Weak Gravitational Lensing</h3>
-    <p>Developing non-Gaussian statistics and analysis tools for next-generation weak lensing surveys like LSST, Euclid, and Roman.</p>
-  </div>
-  <div class="research-card">
-    <div class="card-icon">💻</div>
-    <h3>Cosmological Simulations</h3>
-    <p>Building novel methods for extracting maximum information from hydrodynamical simulations and understanding baryonic effects.</p>
-  </div>
-  <div class="research-card">
-    <div class="card-icon">🔬</div>
-    <h3>Baryon Correction Models</h3>
-    <p>Testing and improving semi-analytic models that account for baryonic physics in dark matter-only simulations for survey analyses.</p>
-  </div>
-  <div class="research-card">
-    <div class="card-icon">📊</div>
-    <h3>Statistical Methods & Emulation</h3>
-    <p>Developing reduced-variance emulation methods like CARPoolGP to efficiently explore high-dimensional simulation parameter spaces.</p>
-  </div>
+<div class="pub-entry">
+<span class="pub-title"><a href="/publication/2025-04-16-IA">The effect of intrinsic alignments on weak lensing statistics in hydrodynamical simulations</a></span><br>
+<span class="pub-authors">M. E. Lee, Z. Haiman, S. Pandey, S. Genel</span><br>
+<span class="pub-detail">arXiv:2504.12460, 2025</span>
+&middot; <a href="https://arxiv.org/abs/2504.12460">arXiv</a>
 </div>
 
-<h2 class="section-heading"><i class="fas fa-file-alt"></i> Recent Publications</h2>
-
-<div class="pub-card">
-  <h3><a href="/publication/2026-03-12-BaryonMassRadius">The impact of baryons on weak lensing statistics as a function of halo mass and radius</a></h3>
-  <div class="pub-meta"><span class="pub-venue">arXiv:2603.11815</span><span class="pub-year">2026</span></div>
-  <p class="pub-excerpt">A framework for diagnosing critical mass and radius scales in baryonic modeling across multiple weak lensing statistics for next-generation surveys.</p>
-  <div class="pub-links">
-    <a href="https://arxiv.org/abs/2603.11815"><i class="fas fa-external-link-alt"></i> arXiv</a>
-  </div>
+<div class="pub-entry">
+<span class="pub-title"><a href="/publication/2024-06-04-CPGP">Zooming by in the CARPool(GP) lane: new CAMELS-TNG simulations of zoomed-in massive halos</a></span><br>
+<span class="pub-authors">M. E. Lee, S. Genel, B. D. Wandelt, et al.</span><br>
+<span class="pub-detail">ApJ, 2024</span>
+&middot; <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad3d4a">journal</a>
+&middot; <a href="https://arxiv.org/abs/2403.10609">arXiv</a>
 </div>
 
-<div class="pub-card">
-  <h3><a href="/publication/2025-04-16-IA">The effect of intrinsic alignments on weak lensing statistics in hydrodynamical simulations</a></h3>
-  <div class="pub-meta"><span class="pub-venue">arXiv:2504.12460</span><span class="pub-year">2025</span></div>
-  <p class="pub-excerpt">Investigating how galaxy intrinsic alignments impact non-Gaussian weak lensing statistics using IllustrisTNG hydrodynamical simulations.</p>
-  <div class="pub-links">
-    <a href="https://arxiv.org/abs/2504.12460"><i class="fas fa-external-link-alt"></i> arXiv</a>
-  </div>
+<div class="pub-entry">
+<span class="pub-title"><a href="/publication/2022-12-05-BCM">Comparing weak lensing peak counts in baryonic correction models to hydrodynamical simulations</a></span><br>
+<span class="pub-authors">M. E. Lee, T. Lu, Z. Haiman, J. Liu, K. Osato</span><br>
+<span class="pub-detail">MNRAS, 2022</span>
+&middot; <a href="https://academic.oup.com/mnras/article/519/1/573/6884156">journal</a>
+&middot; <a href="https://arxiv.org/abs/2201.08320">arXiv</a>
 </div>
 
-<div class="pub-card">
-  <h3><a href="/publication/2024-06-04-CPGP">Zooming by in the CARPool(GP) lane: new CAMELS-TNG simulations of zoomed-in massive halos</a></h3>
-  <div class="pub-meta"><span class="pub-venue">ApJ</span><span class="pub-year">2024</span></div>
-  <p class="pub-excerpt">A suite of 768 zoom-in simulations spanning a 28-dimensional parameter space with a novel reduced-variance emulation method.</p>
-  <div class="pub-links">
-    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad3d4a"><i class="fas fa-external-link-alt"></i> Paper</a>
-  </div>
 </div>
 
-<p style="text-align: right; margin-top: 0.5em;"><a href="/publications/" style="font-weight: 600;">View all publications →</a></p>
+[Full list of publications →](/publications/)
 
-<h2 class="section-heading"><i class="fas fa-road"></i> My Path</h2>
+---
 
-<div class="bio-section">
-  <p>
-    My path to academia was anything but straight. Before physics, I spent years traveling the country, working on organic farms, and managing environmental non-profit fundraising offices. I returned to <strong>Cabrillo Community College</strong>, where an incredible group of professors inspired me to pursue physics and astronomy. After earning associate degrees in Math and History, I transferred to <strong>UC Berkeley</strong> and completed a B.A. with majors in Physics and Astronomy.
-  </p>
-  <p>
-    I then joined <strong>Columbia University</strong> to work on weak lensing research with Prof. Zoltán Haiman, and I've been here since — first as a researcher, then as a graduate student. I'm passionate about science communication, outreach, mentorship, and the arts.
-  </p>
-  <p style="margin-top: 1em; font-weight: 500; color: #0e7490;">Feel free to email me anytime!</p>
-</div>
+## Education
+
+- **Ph.D. in Astronomy**, Columbia University, 2027 (expected)
+- **M.S. in Astronomy**, Columbia University, 2024
+- **B.A. in Astronomy & Physics**, University of California, Berkeley, 2020

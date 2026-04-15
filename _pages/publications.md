@@ -12,16 +12,16 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.publications reversed %}
-  <div class="pub-card">
+  <div class="pub-page-entry">
     <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="pub-meta">
-      {% if post.venue %}<span class="pub-venue">{{ post.venue }}</span>{% endif %}
-      {% if post.date %}<span class="pub-year">{{ post.date | date: "%Y" }}</span>{% endif %}
+    <div class="pub-page-meta">
+      {% if post.venue %}<span class="pub-page-venue">{{ post.venue }}</span>{% endif %}
+      {% if post.date %}<span class="pub-page-year">{{ post.date | date: "%Y" }}</span>{% endif %}
     </div>
-    {% if post.excerpt %}<p class="pub-excerpt">{{ post.excerpt }}</p>{% endif %}
-    <div class="pub-links">
-      {% if post.paperurl %}<a href="{{ post.paperurl }}"><i class="fas fa-external-link-alt"></i> Paper</a>{% endif %}
-      <a href="{{ base_path }}{{ post.url }}"><i class="fas fa-info-circle"></i> Details</a>
+    {% if post.excerpt %}<p class="pub-page-excerpt">{{ post.excerpt }}</p>{% endif %}
+    <div class="pub-page-links">
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">paper</a>{% endif %}
+      <a href="{{ base_path }}{{ post.url }}">details</a>
     </div>
   </div>
 {% endfor %}

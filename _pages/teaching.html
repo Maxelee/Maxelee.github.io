@@ -7,17 +7,6 @@ author_profile: true
 
 {% include base_path %}
 
-<p style="font-size: 1.05em; color: #475569; margin-bottom: 1.5em;">
-  Teaching and mentorship are central to my academic life. As a CTL Lead Teaching Fellow at Columbia, I'm passionate about making science accessible and inspiring the next generation of researchers.
-</p>
-
 {% for post in site.teaching reversed %}
-  <div class="pub-card">
-    <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="pub-meta">
-      {% if post.venue %}<span class="pub-venue">{{ post.venue }}</span>{% endif %}
-      {% if post.date %}<span class="pub-year">{{ post.date | date: "%Y" }}</span>{% endif %}
-    </div>
-    {% if post.type %}<p class="pub-excerpt">{{ post.type }}</p>{% endif %}
-  </div>
+  {% include archive-single.html %}
 {% endfor %}
