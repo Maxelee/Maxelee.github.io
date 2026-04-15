@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Max E. Lee"
 title_separator          : "-"
 name                     : &name "Max E. Lee"
-description              : &description "PhD Candidate at Columbia University"
+description              : &description "Cosmologist & Computational Astrophysicist at Columbia University"
 url                      : "https://Maxelee.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Maxelee/Maxelee.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "selfie.png"
   name             : "Max E. Lee"
   pronouns         : "He/Him" 
-  bio              : "PhD Candidate at Columbia University"
+  bio              : "PhD Candidate in Astronomy | Weak Lensing & Cosmological Simulations"
   location         : "Earth"
   employer         : "Columbia University"
   uri              : "Maxelee.github.io" # URL
@@ -37,7 +37,7 @@ author:
   # researchgate     : # URL
 
   # Repositories and software development
-  github           : "https://github.com/Maxelee" 
+  github           : "Maxelee" 
 
   # Social media
   # bluesky          : "bsky.app" # Replace this with you Bluesky username
