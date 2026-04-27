@@ -5,6 +5,7 @@ permalink: /publication/2026-04-01-Lovell-Emulation
 excerpt: 'A fast emulator for galaxy distribution functions across gigaparsec volumes for varying cosmological parameters.'
 date: 2026-04-01
 venue: 'arXiv preprint'
+authors: 'C. Lovell, M. E. Lee, et al.'
 paperurl: 'https://arxiv.org/abs/2604.17981'
 citation: 'C. Lovell, M. E. Lee, et al. (2026) &quot;Efficiently emulating distribution functions in gigaparsec volumes for varying cosmological parameters.&quot; <i>arXiv:2604.17981</i>.'
 ---

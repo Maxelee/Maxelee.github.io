@@ -14,6 +14,7 @@ author_profile: true
 {% for post in site.publications reversed %}
   <div class="pub-page-entry">
     <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+    {% if post.authors %}<p class="pub-page-authors">{{ post.authors }}</p>{% endif %}
     <div class="pub-page-meta">
       {% if post.venue %}<span class="pub-page-venue">{{ post.venue }}</span>{% endif %}
       {% if post.date %}<span class="pub-page-year">{{ post.date | date: "%Y" }}</span>{% endif %}
