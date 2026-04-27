@@ -51,6 +51,11 @@
   &:last-child {
     border-bottom: none;
   }
+
+  &.first-author {
+    padding-left: 0.75em;
+    border-left: 3px solid #0e7490;
+  }
 }
 
 .pub-title {

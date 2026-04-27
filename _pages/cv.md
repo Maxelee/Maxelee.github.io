@@ -14,12 +14,13 @@ redirect_from:
 - **Ph.D. in Astronomy**, Columbia University, 2027 (expected)
 - **M.S. in Astronomy**, Columbia University, 2024
 - **B.A. in Astronomy & Physics**, University of California, Berkeley, 2020
+- **A.A. in Mathematics & History**, Cabrillo College, 2018
 
 ## Awards & Fellowships
 
-- **Columbia CTL Lead Teaching Fellowship** (2024–2025)
-- **National Osterbrock Leadership Fellowship** (2023–2025)
-- **NSF Graduate Research Fellowship** (2022–2028)
+- **Columbia CTL Lead Teaching Fellowship** (2024–2026)
+- **National Osterbrock Leadership Fellowship** (2023–2026)
+- **NSF Graduate Research Fellowship** (2022–2027)
 - **Ted Bowen Memorial Endowed Scholarship** (2018)
 
 ## Publications

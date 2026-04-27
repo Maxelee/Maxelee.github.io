@@ -39,6 +39,11 @@ Connecting hydrodynamical simulations to baryon correction models. Understanding
 Reduced-variance techniques (CARPool), Gaussian-process emulators, and ML-driven tools for building fast, accurate predictions from expensive simulation suites like CAMELS-TNG.
 </div>
 
+<div class="theme">
+<h3>Field-Level Modeling (BIND)</h3>
+Developing BIND, a neural network-based field-level baryonification and intrinsic alignment model parameterized directly by IllustrisTNG subgrid and cosmological parameters — jointly correcting for feedback and IA in weak lensing analyses.
+</div>
+
 </div>
 
 ---
@@ -47,25 +52,25 @@ Reduced-variance techniques (CARPool), Gaussian-process emulators, and ML-driven
 
 <div class="pub-list">
 
-<div class="pub-entry">
+<div class="pub-entry first-author">
 <span class="pub-title"><a href="/publication/2026-03-12-BaryonMassRadius">The impact of baryons on weak lensing statistics as a function of halo mass and radius</a></span><br>
 <span class="pub-authors">M. E. Lee, Z. Haiman, S. Genel · arXiv:2603.11815, 2026</span><br>
 <span class="pub-desc">Quantifies how halo mass and radius drive baryonic impacts on weak lensing statistics.</span>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry first-author">
 <span class="pub-title"><a href="/publication/2025-04-16-IA">The effect of intrinsic alignments on weak lensing statistics in hydrodynamical simulations</a></span><br>
-<span class="pub-authors">M. E. Lee, Z. Haiman, S. Pandey, S. Genel · arXiv:2504.12460, 2025</span><br>
+<span class="pub-authors">M. E. Lee, Z. Haiman, S. Pandey, S. Genel · ApJ, 2026</span><br>
 <span class="pub-desc">Measures how intrinsic alignments contaminate non-Gaussian lensing probes in full-physics simulations.</span>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry first-author">
 <span class="pub-title"><a href="/publication/2024-06-04-CPGP">Zooming by in the CARPool(GP) lane: new CAMELS-TNG simulations of zoomed-in massive halos</a></span><br>
 <span class="pub-authors">M. E. Lee, S. Genel, B. D. Wandelt, et al. · ApJ, 2024</span><br>
 <span class="pub-desc">Introduces variance-reduced Gaussian-process emulation of zoomed-in hydrodynamical simulations.</span>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry first-author">
 <span class="pub-title"><a href="/publication/2022-12-05-BCM">Comparing weak lensing peak counts in baryonic correction models to hydrodynamical simulations</a></span><br>
 <span class="pub-authors">M. E. Lee, T. Lu, Z. Haiman, J. Liu, K. Osato · MNRAS, 2022</span><br>
 <span class="pub-desc">Tests whether baryon correction models can reproduce non-Gaussian lensing statistics from full simulations.</span>
@@ -92,13 +97,18 @@ Reduced-variance techniques (CARPool), Gaussian-process emulators, and ML-driven
 </div>
 
 <div class="software-entry">
+<a href="https://github.com/Maxelee/cosmoANP"><strong>cosmoANP</strong></a>
+<span class="software-desc">Attentive neural process for fast cosmological field-level inference.</span>
+</div>
+
+<div class="software-entry">
 <a href="https://github.com/Maxelee/hydro_replace"><strong>hydro_replace</strong></a>
 <span class="software-desc">Tools for replacing dark-matter-only fields with hydrodynamical predictions.</span>
 </div>
 
 <div class="software-entry">
-<a href="https://github.com/Maxelee/STAR_emu"><strong>STAR_emu</strong></a>
-<span class="software-desc">Emulator for stellar-to-halo-mass relations from cosmological simulations.</span>
+<a href="https://github.com/Maxelee/zoomGZ"><strong>zoomGZ</strong></a>
+<span class="software-desc">Pipeline for generating and managing zoom-in simulation suites across high-dimensional parameter spaces.</span>
 </div>
 
 </div>
