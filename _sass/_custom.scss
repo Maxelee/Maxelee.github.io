@@ -39,7 +39,7 @@
   }
 }
 
-/* ---- BIND embed ---- */
+/* ---- BIND page ---- */
 .bind-notice {
   background: #fefce8;
   border: 1px solid #fde68a;
@@ -51,23 +51,8 @@
   color: #78350f;
 }
 
-.bind-embed {
-  position: relative;
-  width: 100%;
-  padding-bottom: 75%;
-  height: 0;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+.bind-launch {
+  margin-top: 1.5em;
 }
 
 /* ---- Publication list on homepage ---- */
