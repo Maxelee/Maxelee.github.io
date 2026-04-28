@@ -3,6 +3,9 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "BIND Explorer"
+    url: /bind/
+
   - title: "Software"
     url: /software/
 
