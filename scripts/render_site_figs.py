@@ -16,11 +16,19 @@ Outputs (drop into images/ and convert to webp as noted in VISUALS.md):
 Normalization matches the talk figures: log10 stretch from the 5th percentile
 of positive pixels to the 99.9th, fixed per channel from the t=1 frame;
 nearest-neighbor upsample keeps the native 128^2 pixels crisp.
+
+Animations are assembled with img2webp (`brew install webp`): Pillow's webp
+writer silently drops per-frame durations, so animated saves go through PNG
+frame directories + img2webp, which also delta-encodes frames (~3x smaller).
 """
 import os
+import subprocess
+import tempfile
 import numpy as np
 from matplotlib import colormaps
 from PIL import Image
+
+IMG2WEBP = '/opt/homebrew/bin/img2webp'
 
 CACHE = os.path.expanduser('~/Downloads/talk_figs2/cache')
 OUT = os.path.expanduser('~/Desktop/site_renders')
@@ -39,6 +47,17 @@ def render(img, lo, hi, size=512):
     a = (a - np.log10(lo)) / (np.log10(hi) - np.log10(lo))
     rgb = (CMAP(a)[..., :3] * 255).astype(np.uint8)
     return Image.fromarray(rgb).resize((size, size), Image.NEAREST)
+
+
+def save_anim(images, durations, out, quality=58):
+    """Assemble an animated webp with per-frame durations via img2webp."""
+    with tempfile.TemporaryDirectory() as td:
+        cmd = [IMG2WEBP, '-loop', '0']
+        for n, (im, d) in enumerate(zip(images, durations)):
+            p = f'{td}/f{n:03d}.png'
+            im.save(p)
+            cmd += ['-lossy', '-q', str(quality), '-d', str(d), p]
+        subprocess.run(cmd + ['-o', out], check=True, capture_output=True)
 
 
 def main():
@@ -64,8 +83,19 @@ def main():
     anim = [render(frames[i, GAS], lo_g, hi_g) for i in range(len(frames))]
     dur = [60] * len(anim)
     dur[-1] = 1800
-    anim[0].save(f'{OUT}/fm-gas.webp', save_all=True, append_images=anim[1:],
-                 duration=dur, loop=0, quality=55, method=4)
+    save_anim(anim, dur, f'{OUT}/fm-gas.webp')
+
+    # Homepage hero animation (-> images/bind/hero-anim.webp): the finished
+    # field comes FIRST with a long hold (so non-animating browsers show it),
+    # then noise -> generation, wrapping seamlessly back to the hold. The
+    # noisy first third is frame-thinned to keep the file small.
+    idx = [i for i in range(len(frames) - 1) if i >= 20 or i % 2 == 0]
+    seq = [render(frames[-1, GAS], lo_g, hi_g, 640)]
+    d = [4500]
+    for i in idx:
+        seq.append(render(frames[i, GAS], lo_g, hi_g, 640))
+        d.append(110 if i < 20 else 60)
+    save_anim(seq, d, f'{OUT}/hero-anim.webp')
 
     # Parameter sweeps (gas), ping-pong loops with holds at the ends
     for name, fn in [('sweep-imf', 'task_b_IMFslope'),
@@ -78,8 +108,7 @@ def main():
         d = [90] * len(pp)
         d[0] = 700
         d[len(seq) - 1] = 700
-        pp[0].save(f'{OUT}/{name}.webp', save_all=True, append_images=pp[1:],
-                   duration=d, loop=0, quality=55, method=4)
+        save_anim(pp, d, f'{OUT}/{name}.webp')
 
     render(frames[-1, GAS], lo_g, hi_g, 1024).save(f'{OUT}/hero-gas-t1.png')
     render(frames[-1, DM], lo_d, hi_d, 640).save(f'{OUT}/teaser-dm.png')

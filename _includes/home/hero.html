@@ -20,8 +20,11 @@
       </div>
     </div>
     <div class="hero__visual">
-      <img src="/images/bind/hero-field.webp" alt="A BIND-generated projected gas field of a cluster-mass halo, glowing core with filaments" width="1024" height="1024">
-      <p class="hero__visual-caption">BIND-generated gas field &middot; 10¹⁴ M⊙ halo &middot; conditioned on IllustrisTNG</p>
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcset="/images/bind/hero-field.webp" type="image/webp">
+        <img src="/images/bind/hero-anim.webp" alt="Animation of BIND generating the gas field of a cluster-mass halo from pure noise via flow matching" width="640" height="640">
+      </picture>
+      <p class="hero__visual-caption">BIND generating a 10¹⁴ M⊙ halo's gas field from noise &middot; ~1&thinsp;s on a GPU</p>
     </div>
   </div>
 </section>
