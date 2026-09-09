@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -18,11 +18,17 @@ gem "github-pages", group: :jekyll_plugins
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
+# Stdlib gems no longer bundled with Ruby >= 3.4 (needed locally by Jekyll 3.9;
+# the GitHub Pages build environment ignores this Gemfile entirely)
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
   gem "webrick", "~> 1.8"
 end

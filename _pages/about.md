@@ -41,7 +41,7 @@ Reduced-variance techniques (CARPool), Gaussian-process emulators, and ML-driven
 
 <div class="theme">
 <h3>Field-Level Modeling (BIND)</h3>
-Developing BIND, a neural network-based field-level baryonification and intrinsic alignment model parameterized directly by IllustrisTNG subgrid and cosmological parameters — jointly correcting for feedback and IA in weak lensing analyses.
+Developing BIND (Baryonic INpainting with Deep learning), a conditional flow-matching model that maps dark-matter-only halos to their full hydrodynamical counterparts across the 35-dimensional IllustrisTNG parameter space — a field-level route to baryonic modeling in weak lensing analyses.
 </div>
 
 </div>
@@ -51,6 +51,18 @@ Developing BIND, a neural network-based field-level baryonification and intrinsi
 ## Selected Work
 
 <div class="pub-list">
+
+<div class="pub-entry first-author">
+<span class="pub-title"><a href="/publication/2026-09-09-BIND-methods">BIND (Baryonic INpainting with Deep learning): A Field-level Emulator for Galaxy Groups and Clusters</a></span><br>
+<span class="pub-authors">M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, C. C. Lovell, B. Hadzhiyska · Submitted, 2026</span><br>
+<span class="pub-desc">A conditional flow-matching model that paints baryons onto dark-matter-only halos at the field level, in minutes on one GPU. <a href="/files/BIND_methods.pdf">[PDF]</a></span>
+</div>
+
+<div class="pub-entry first-author">
+<span class="pub-title"><a href="/publication/2026-09-09-BIND-lightcone">BINDing the lightcone: A suite of astrophysical ray-traced weak lensing and SZ maps</a></span><br>
+<span class="pub-authors">M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, B. Hadzhiyska · Submitted, 2026</span><br>
+<span class="pub-desc">1000-realization ray-traced convergence, optical depth, and Compton-y maps spanning the IllustrisTNG galaxy formation prior. <a href="/files/BINDing_the_lightcone.pdf">[PDF]</a></span>
+</div>
 
 <div class="pub-entry first-author">
 <span class="pub-title"><a href="/publication/2026-03-12-BaryonMassRadius">The impact of baryons on weak lensing statistics as a function of halo mass and radius</a></span><br>
@@ -109,6 +121,11 @@ Developing BIND, a neural network-based field-level baryonification and intrinsi
 <div class="software-entry">
 <a href="https://github.com/Maxelee/zoomGZ"><strong>zoomGZ</strong></a>
 <span class="software-desc">Pipeline for generating and managing zoom-in simulation suites across high-dimensional parameter spaces.</span>
+</div>
+
+<div class="software-entry">
+<a href="https://github.com/Maxelee/STAR_emu"><strong>STAR_emu</strong></a>
+<span class="software-desc">Emulator for stellar-to-halo-mass relations trained on hydrodynamical simulations.</span>
 </div>
 
 </div>

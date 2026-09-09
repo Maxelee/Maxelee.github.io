@@ -8,4 +8,4 @@ date: 2024-01-01
 location: "NYC, United States of America"
 ---
 
-Instructor for the undergraduate astronomy lab covering topics from orbital motion to cosmic expansion. 
+Spring 2024 instructor of record for the undergraduate astronomy lab, covering topics from orbital motion to cosmic expansion.

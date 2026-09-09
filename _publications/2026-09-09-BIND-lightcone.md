@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2026-09-09-BIND-lightcone
 excerpt: 'Ray-traced convergence, optical depth, and Compton-y maps with 1000 pseudo-independent realizations spanning the thirty-dimensional IllustrisTNG galaxy formation prior.'
 date: 2026-09-09
-venue: 'Preprint (submitted)'
+venue: 'Submitted'
 authors: 'M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, B. Hadzhiyska'
 paperurl: 'https://maxelee.github.io/files/BINDing_the_lightcone.pdf'
 citation: 'M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, B. Hadzhiyska (2026) &quot;BINDing the lightcone: A suite of astrophysical ray-traced weak lensing and SZ maps.&quot; <i>submitted</i>.'

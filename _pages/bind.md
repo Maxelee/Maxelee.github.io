@@ -7,9 +7,11 @@ author_profile: false
 
 ## BIND Halo Explorer
 
-**BIND** (Baryonification and Intrinsic alignment Neural Diffusion model) is a field-level generative model trained on IllustrisTNG simulations. It maps dark matter-only fields to full hydrodynamical fields — including gas, stars, and dark matter — conditioned on IllustrisTNG's 35-dimensional astrophysical and cosmological parameter space.
+**BIND** (Baryonic INpainting with Deep learning) is a conditional flow-matching model trained on the CAMELS IllustrisTNG simulations. It maps dark matter-only halos to their full hydrodynamical counterparts — dark matter, gas, and stars — conditioned on the 35-dimensional astrophysical and cosmological parameter space of IllustrisTNG.
 
 The explorer lets you tune parameters with sliders and watch BIND generate halo projections in real time, running inference on a live GPU.
+
+Read the papers: [BIND methods paper (PDF)](/files/BIND_methods.pdf) · [BINDing the lightcone (PDF)](/files/BINDing_the_lightcone.pdf)
 
 <div class="bind-notice">
   ⚠️ <strong>Note:</strong> The app runs on a cloud GPU and may take up to a minute to load on first visit.

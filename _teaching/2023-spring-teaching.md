@@ -1,7 +1,7 @@
 ---
 title: "TA - Theories of the Universe: From Babylon to the Big Bang"
 collection: teaching
-type: "Undergraduate Course"
+type: "Undergraduate course"
 permalink: /teaching/2023-spring-teaching
 venue: "Columbia University"
 date: 2023-01-01
