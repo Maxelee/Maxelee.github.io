@@ -1,19 +1,21 @@
 ---
-layout: archive
+layout: page
 title: "Talks"
+eyebrow: "Presentations"
 permalink: /talks/
-author_profile: true
+description: "Talks and presentations by Max E. Lee."
 ---
 
 {% if site.data.talks and site.data.talks.size > 0 %}
-  {% for t in site.data.talks %}
-  <div class="list__item">
-    <article class="archive__item">
-      <h2 class="archive__item-title">{{ t.title }}</h2>
-      <p class="archive__item-excerpt"><strong>{{ t.type }}</strong> · {{ t.venue }} · {{ t.date | date: "%B %Y" }}{% if t.location %} · {{ t.location }}{% endif %}{% if t.url and t.url != "" %} · <a href="{{ t.url }}">Link</a>{% endif %}</p>
-    </article>
-  </div>
-  {% endfor %}
+{% for t in site.data.talks %}
+<div class="pub-card">
+<div class="pub-card__body">
+<h3 class="pub-card__title">{{ t.title }}</h3>
+<div class="pub-card__meta"><span class="chip">{{ t.type }}</span><span class="chip">{{ t.date | date: "%B %Y" }}</span>{% if t.location %}<span class="chip">{{ t.location }}</span>{% endif %}</div>
+<p class="pub-card__excerpt">{{ t.venue }}{% if t.url and t.url != "" %} · <a href="{{ t.url }}">slides/recording</a>{% endif %}</p>
+</div>
+</div>
+{% endfor %}
 {% else %}
-  <p>Talk list coming soon.</p>
+<p>Talk list coming soon.</p>
 {% endif %}

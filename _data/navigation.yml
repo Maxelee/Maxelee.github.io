@@ -1,16 +1,16 @@
-# main links links
+# main links
 main:
   - title: "Publications"
     url: /publications/
 
-  - title: "BIND Explorer"
+  - title: "BIND"
     url: /bind/
 
   - title: "Software"
     url: /software/
 
   - title: "Teaching"
-    url: /teaching/    
-    
+    url: /teaching/
+
   - title: "CV"
     url: /cv/

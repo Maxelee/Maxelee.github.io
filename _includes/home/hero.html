@@ -1,0 +1,27 @@
+{% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
+<section class="hero">
+  <div class="hero__stars" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <div class="hero__content">
+      <span class="eyebrow">Cosmology &middot; Columbia University</span>
+      <h1 class="hero__name">Max E. Lee</h1>
+      <p class="hero__thesis">I map how baryonic physics reshapes the weak-lensing sky &mdash; building field-level models of feedback for LSST, <em>Euclid</em>, and <em>Roman</em>.</p>
+      <p class="hero__fellowships">NSF Graduate Research Fellow &middot; AAS Osterbrock Leadership Fellow &middot; Columbia CTL Lead Teaching Fellow</p>
+      <div class="btn-row">
+        {% if cv_pdf %}
+        <a class="btn btn--primary" href="/files/cv.pdf">{% include icon.html name="download" %} Download CV</a>
+        {% else %}
+        <a class="btn btn--primary" href="/cv/">Curriculum Vitae</a>
+        {% endif %}
+        <a class="btn" href="/publications/">Publications</a>
+        <a class="btn" href="/bind/">BIND</a>
+        <a class="btn" href="https://github.com/{{ site.author.github }}">GitHub</a>
+        <a class="btn" href="mailto:{{ site.author.email }}">Email</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <img src="/images/bind/hero-field.webp" alt="A BIND-generated projected dark-matter field of a massive halo" width="646" height="646">
+      <p class="hero__visual-caption">BIND-generated dark-matter field &middot; conditioned on IllustrisTNG</p>
+    </div>
+  </div>
+</section>

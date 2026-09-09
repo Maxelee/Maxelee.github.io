@@ -1,0 +1,12 @@
+# Research themes on the homepage.
+- title: "Weak Lensing Statistics"
+  text: "Power spectra, peak counts, and other non-Gaussian probes of the matter distribution. Quantifying how higher-order statistics improve cosmological constraints beyond two-point functions."
+
+- title: "Baryonic Effects"
+  text: "Connecting hydrodynamical simulations to baryon correction models. Understanding how feedback processes — AGN, stellar winds, gas cooling — reshape the matter field and bias lensing observables."
+
+- title: "Simulation & Emulation Methods"
+  text: "Reduced-variance techniques (CARPool), Gaussian-process emulators, and ML-driven tools for building fast, accurate predictions from expensive simulation suites like CAMELS-TNG."
+
+- title: "Field-Level Modeling (BIND)"
+  text: "BIND (Baryonic INpainting with Deep learning), a conditional flow-matching model that maps dark-matter-only halos to their full hydrodynamical counterparts across the 35-dimensional IllustrisTNG parameter space."

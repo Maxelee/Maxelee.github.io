@@ -1,0 +1,30 @@
+# Research software — single source of truth for the homepage and /software/.
+- name: CARPoolGP
+  repo: https://github.com/Maxelee/CARPoolGP
+  tagline: "Gaussian-process regression with control-variates (CARPool) variance reduction for building emulators from expensive simulation suites."
+  paper_url: /publication/2024-06-04-CPGP
+  paper_label: "Lee et al. 2024, ApJ"
+
+- name: BCM_lensing
+  repo: https://github.com/Maxelee/BCM_lensing
+  tagline: "Baryon correction model pipeline for generating weak lensing convergence maps and computing peak count statistics."
+  paper_url: /publication/2022-12-05-BCM
+  paper_label: "Lee et al. 2023, MNRAS"
+
+- name: hydro_replace
+  repo: https://github.com/Maxelee/hydro_replace
+  tagline: "Tools for replacing dark-matter-only fields with their hydrodynamical counterparts at the particle level."
+  paper_url: /publication/2026-03-12-BaryonMassRadius
+  paper_label: "Lee et al. 2026"
+
+- name: STAR_emu
+  repo: https://github.com/Maxelee/STAR_emu
+  tagline: "Emulator for stellar-to-halo-mass relations trained on hydrodynamical simulations."
+
+- name: cosmoANP
+  repo: https://github.com/Maxelee/cosmoANP
+  tagline: "Attentive neural processes applied to cosmological parameter inference."
+
+- name: zoomGZ
+  repo: https://github.com/Maxelee/zoomGZ
+  tagline: "Pipeline for generating and managing zoom-in simulation suites across high-dimensional parameter spaces."

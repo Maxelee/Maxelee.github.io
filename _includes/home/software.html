@@ -1,0 +1,18 @@
+<section class="section" id="software">
+  <div class="section__title">
+    <h2>Software</h2>
+    <a class="section__link" href="/software/">all software →</a>
+  </div>
+  <div class="software-grid software-grid--3">
+    {% for sw in site.data.software limit: 6 %}
+    <div class="software-card">
+      <h3><a href="{{ sw.repo }}">{{ sw.name }}</a></h3>
+      <p>{{ sw.tagline }}</p>
+      <div class="software-card__links">
+        <a href="{{ sw.repo }}">code ↗</a>
+        {% if sw.paper_url %}<a href="{{ sw.paper_url }}">{{ sw.paper_label | default: "paper" }}</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

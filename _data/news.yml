@@ -1,0 +1,12 @@
+# Homepage news strip, newest first. Keep to ~4 items; the strip shows the top 3.
+- date: 2026-09-09
+  text: "Two BIND papers submitted: the methods paper and BINDing the lightcone"
+  url: /bind/
+
+- date: 2026-03-12
+  text: "New preprint on where baryons matter for weak lensing statistics"
+  url: /publication/2026-03-12-BaryonMassRadius
+
+- date: 2026-01-16
+  text: "Intrinsic alignments paper published in ApJ"
+  url: /publication/2025-04-16-IA

@@ -1,0 +1,24 @@
+{% assign pub = include.pub %}
+{% assign lead = pub.authors | slice: 0, 9 %}
+<article class="pub-card{% if pub.teaser %} pub-card--thumb{% endif %}">
+  {% if pub.teaser %}
+  <a class="pub-card__thumb" href="{{ pub.url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ pub.teaser }}" alt="" loading="lazy" width="646" height="646">
+  </a>
+  {% endif %}
+  <div class="pub-card__body">
+    <h3 class="pub-card__title"><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
+    <p class="pub-card__authors">{{ pub.authors | replace: "M. E. Lee", "<strong>M. E. Lee</strong>" }}</p>
+    <div class="pub-card__meta">
+      <span class="chip">{{ pub.venue }}</span>
+      <span class="chip">{{ pub.date | date: "%Y" }}</span>
+      {% if lead == "M. E. Lee" %}<span class="chip chip--accent">first author</span>{% endif %}
+    </div>
+    {% if pub.excerpt %}<p class="pub-card__excerpt">{{ pub.excerpt | strip_html | strip_newlines }}</p>{% endif %}
+    <div class="pub-card__links">
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}">paper ↗</a>{% endif %}
+      {% if pub.arxiv and pub.arxiv != pub.paperurl %}<a href="{{ pub.arxiv }}">arXiv ↗</a>{% endif %}
+      <a href="{{ pub.url }}">details →</a>
+    </div>
+  </div>
+</article>

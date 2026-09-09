@@ -1,13 +1,20 @@
 ---
-layout: archive
-title: "CV"
+layout: page
+title: "Curriculum Vitae"
+eyebrow: "CV"
 permalink: /cv/
-author_profile: true
+description: "CV of Max E. Lee — cosmology PhD candidate at Columbia University."
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+{% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
+{% if cv_pdf %}
+<div class="cv-actions">
+<a class="btn btn--primary" href="/files/cv.pdf">{% include icon.html name="download" %} Download CV (PDF)</a>
+<span class="cv-updated">updated {{ cv_pdf.modified_time | date: "%B %Y" }}</span>
+</div>
+{% endif %}
 
 ## Education
 
@@ -25,9 +32,12 @@ redirect_from:
 
 ## Publications
 
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<div>
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% for pub in pubs %}
+<p class="cv-pub"><a href="{{ pub.url }}">{{ pub.title }}</a><span class="cv-pub__meta">{{ pub.venue }} · {{ pub.date | date: "%Y" }}</span></p>
+{% endfor %}
+</div>
 
 ## Teaching
 

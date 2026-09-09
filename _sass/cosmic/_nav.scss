@@ -1,0 +1,163 @@
+// Site header: brand, nav, theme toggle. Sticky with backdrop blur.
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3.6rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-strong);
+  letter-spacing: 0.01em;
+  border-bottom: none;
+  margin-right: auto;
+
+  &:hover {
+    color: var(--accent);
+    border-bottom: none;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__list a {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  padding: 0.45em 0.75em;
+  border-radius: var(--radius-sm);
+  border-bottom: none;
+
+  &:hover {
+    color: var(--text-strong);
+    background: var(--chip-bg);
+    border-bottom: none;
+  }
+
+  &[aria-current="page"] {
+    color: var(--accent);
+  }
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.4em 0.55em;
+  cursor: pointer;
+  color: var(--text);
+  line-height: 0;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.4em 0.55em;
+  cursor: pointer;
+  color: var(--muted);
+  line-height: 0;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 14px var(--glow);
+  }
+
+  .icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+  }
+}
+
+// The toggle shows the theme you would switch TO
+.theme-toggle__sun {
+  display: inline-block;
+}
+
+.theme-toggle__moon {
+  display: none;
+}
+
+[data-theme="light"] {
+  .theme-toggle__sun {
+    display: none;
+  }
+
+  .theme-toggle__moon {
+    display: inline-block;
+  }
+}
+
+// Mobile
+@media (max-width: $bp-md) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg-elev);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .site-nav__list a {
+    padding: 0.75em 0.5em;
+    font-size: var(--fs-base);
+  }
+
+  .site-nav.is-open .site-nav__list {
+    display: flex;
+  }
+
+  // Without JS, keep the nav visible
+  .no-js .site-nav__list {
+    display: flex;
+    position: static;
+    box-shadow: none;
+  }
+}
