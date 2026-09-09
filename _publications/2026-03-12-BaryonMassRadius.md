@@ -6,7 +6,11 @@ excerpt: 'Diagnosing critical mass and radius scales for baryonic modeling acros
 date: 2026-03-12
 venue: 'arXiv'
 authors: 'M. E. Lee, Z. Haiman, S. Genel'
+selected: true
+selected_order: 3
+teaser: /images/pubs/baryon-mass-radius.webp
 paperurl: 'https://arxiv.org/abs/2603.11815'
+arxiv: 'https://arxiv.org/abs/2603.11815'
 citation: 'M. E. Lee, Z. Haiman, S. Genel (2026) &quot;The impact of baryons on weak lensing statistics as a function of halo mass and radius.&quot; <i>arXiv:2603.11815</i>.'
 ---
 

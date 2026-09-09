@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% assign lead = page.authors | slice: 0, 9 %}
+<div class="wrap wrap--prose page-body">
+  <header class="page-head">
+    <a class="pub-detail__back" href="/publications/">← all publications</a>
+    <h1>{{ page.title }}</h1>
+    <p class="pub-detail__authors">{{ page.authors | replace: "M. E. Lee", "<strong>M. E. Lee</strong>" }}</p>
+    <div class="pub-detail__meta">
+      <span class="chip">{{ page.venue }}</span>
+      <span class="chip">{{ page.date | date: "%Y" }}</span>
+      {% if lead == "M. E. Lee" %}<span class="chip chip--accent">first author</span>{% endif %}
+    </div>
+    <div class="btn-row">
+      {% if page.paperurl %}<a class="btn btn--primary" href="{{ page.paperurl }}">Read the paper ↗</a>{% endif %}
+      {% if page.arxiv and page.arxiv != page.paperurl %}<a class="btn" href="{{ page.arxiv }}">arXiv ↗</a>{% endif %}
+    </div>
+  </header>
+
+  {% if page.teaser %}
+  <figure class="pub-detail__figure">
+    <img src="{{ page.teaser }}" alt="Key figure from the paper" width="646">
+  </figure>
+  {% endif %}
+
+  <div class="pub-detail__abstract prose">
+    <h2>Abstract</h2>
+    {{ content }}
+  </div>
+
+  {% if page.citation %}
+  <details class="pub-detail__citation">
+    <summary>Cite this paper</summary>
+    <blockquote>{{ page.citation }}</blockquote>
+  </details>
+  {% endif %}
+</div>

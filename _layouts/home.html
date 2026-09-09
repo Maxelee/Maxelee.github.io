@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% include home/hero.html %}
+{% include home/news.html %}
+<div class="wrap">
+  {% include home/bind-feature.html %}
+  {% include home/selected-pubs.html %}
+  {% include home/themes.html %}
+  {% include home/software.html %}
+  <section class="section" id="about">
+    <div class="section__title">
+      <h2>Background</h2>
+    </div>
+    <div class="about-flex">
+      <div class="about-portrait">
+        <img src="/images/portrait.webp" alt="Portrait of Max E. Lee" loading="lazy" width="640" height="640">
+      </div>
+      <div class="about-text prose">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Publications"
+permalink: /publications/
+description: "Publications by Max E. Lee: weak lensing statistics, baryonic effects, and field-level generative models for cosmology."
+---
+<div class="wrap page-body">
+  <header class="page-head">
+    <span class="eyebrow">Research output</span>
+    <h1>Publications</h1>
+    <p class="page-head__lede">Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a> and <a href="{{ site.author.arxiv }}">arXiv</a>. First-author papers are tagged.</p>
+  </header>
+
+  {% assign pubs = site.publications | sort: "date" | reverse %}
+  {% assign year = "" %}
+  {% for pub in pubs %}
+    {% capture pub_year %}{{ pub.date | date: "%Y" }}{% endcapture %}
+    {% if pub_year != year %}
+      {% assign year = pub_year %}
+      <h2 class="pub-year">{{ year }}</h2>
+    {% endif %}
+    {% include pub-card.html pub=pub %}
+  {% endfor %}
+</div>

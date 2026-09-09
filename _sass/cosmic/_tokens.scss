@@ -1,0 +1,92 @@
+// Design tokens — dark cosmic default, light theme override.
+// Breakpoints are Sass-side; everything themable is a CSS custom property.
+
+$bp-sm: 600px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+:root {
+  color-scheme: dark;
+
+  --bg: #070b14;
+  --bg-elev: #0d1322;
+  --surface: #111a2e;
+  --surface-2: #16213a;
+  --border: #1e2a45;
+  --border-strong: #2b3a5e;
+
+  --text: #e8ecf8;
+  --text-strong: #ffffff;
+  --muted: #97a3c0;
+  --faint: #5d6b8c;
+
+  --accent: #38e1ff;
+  --accent-2: #a78bfa;
+  --link: #67e8f9;
+  --link-hover: #a5f3ff;
+  --btn-primary-text: #04121a;
+
+  --glow: rgba(56, 225, 255, 0.25);
+  --glow-2: rgba(167, 139, 250, 0.18);
+  --chip-bg: rgba(56, 225, 255, 0.08);
+  --chip-2-bg: rgba(167, 139, 250, 0.12);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.35);
+
+  --header-bg: rgba(7, 11, 20, 0.82);
+  --hero-star: rgba(232, 236, 248, 0.85);
+  --hero-star-faint: rgba(232, 236, 248, 0.4);
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1.0625rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5625rem;
+  --fs-xl: 1.953rem;
+  --fs-2xl: 2.44rem;
+
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --wrap: 1080px;
+  --prose: 46rem;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f7f9fe;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef2fb;
+  --border: #dde4f0;
+  --border-strong: #c3cee3;
+
+  --text: #131a2c;
+  --text-strong: #05080f;
+  --muted: #5c6784;
+  --faint: #8a94ad;
+
+  --accent: #0e7490;
+  --accent-2: #6d28d9;
+  --link: #0e7490;
+  --link-hover: #0891b2;
+  --btn-primary-text: #f4feff;
+
+  --glow: rgba(14, 116, 144, 0.12);
+  --glow-2: rgba(109, 40, 217, 0.08);
+  --chip-bg: rgba(14, 116, 144, 0.07);
+  --chip-2-bg: rgba(109, 40, 217, 0.08);
+  --shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 1px 6px rgba(15, 23, 42, 0.06);
+
+  --header-bg: rgba(247, 249, 254, 0.85);
+  --hero-star: rgba(19, 26, 44, 0.35);
+  --hero-star-faint: rgba(19, 26, 44, 0.15);
+}
+
+// The site is deliberately dark-by-default for every first visit; the header
+// toggle switches to light and the choice persists in localStorage.

@@ -5,6 +5,9 @@ permalink: /publication/2026-09-09-BIND-methods
 excerpt: 'A conditional flow-matching model that maps dark-matter-only halos to their hydrodynamical counterparts across the full 35-dimensional CAMELS SB35 parameter space.'
 date: 2026-09-09
 venue: 'Submitted'
+selected: true
+selected_order: 1
+teaser: /images/pubs/bind-methods.webp
 authors: 'M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, C. C. Lovell, B. Hadzhiyska'
 paperurl: 'https://maxelee.github.io/files/BIND_methods.pdf'
 citation: 'M. E. Lee, S. Genel, Z. Haiman, G. L. Bryan, C. C. Lovell, B. Hadzhiyska (2026) &quot;BIND (Baryonic INpainting with Deep learning): A Field-level Emulator for Galaxy Groups and Clusters.&quot; <i>submitted</i>.'

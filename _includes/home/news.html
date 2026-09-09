@@ -1,0 +1,10 @@
+{% if site.data.news and site.data.news.size > 0 %}
+<aside class="news" aria-label="Recent news">
+  <div class="wrap news__inner">
+    <span class="news__label">News</span>
+    {% for item in site.data.news limit: 3 %}
+    <span class="news__item"><time datetime="{{ item.date }}">{{ item.date | date: "%b %Y" }}</time>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</span>
+    {% endfor %}
+  </div>
+</aside>
+{% endif %}

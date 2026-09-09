@@ -1,16 +1,18 @@
 ---
-layout: archive
+layout: page
 title: "Teaching"
+eyebrow: "Instruction"
+lede: "Instructor-of-record and TA roles at Columbia, plus mentoring through the CTL Lead Teaching Fellowship."
 permalink: /teaching/
-author_profile: true
+description: "Teaching experience of Max E. Lee at Columbia University."
 ---
 
 {% for t in site.data.teaching %}
-  <div class="list__item">
-    <article class="archive__item">
-      <h2 class="archive__item-title">{{ t.role }} — {{ t.course }}</h2>
-      <p class="archive__item-excerpt"><strong>{{ t.term }}</strong> · {{ t.venue }}</p>
-      <p class="archive__item-excerpt">{{ t.description }}</p>
-    </article>
-  </div>
+<div class="pub-card">
+<div class="pub-card__body">
+<h3 class="pub-card__title">{{ t.role }} — {{ t.course }}</h3>
+<div class="pub-card__meta"><span class="chip">{{ t.term }}</span><span class="chip">{{ t.venue }}</span></div>
+<p class="pub-card__excerpt">{{ t.description }}</p>
+</div>
+</div>
 {% endfor %}

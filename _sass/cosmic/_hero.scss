@@ -1,0 +1,144 @@
+// Homepage hero: identity + BIND field visual over a CSS starfield.
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+// Nebula glows
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(560px 380px at 12% -10%, var(--glow-2), transparent 70%),
+    radial-gradient(640px 420px at 88% 8%, var(--glow), transparent 70%);
+}
+
+// Tiled star specks, two repeat scales
+.hero__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 25px 35px, var(--hero-star), transparent 55%),
+    radial-gradient(1px 1px at 150px 120px, var(--hero-star-faint), transparent 55%),
+    radial-gradient(1.5px 1.5px at 220px 60px, var(--hero-star), transparent 55%),
+    radial-gradient(1px 1px at 80px 200px, var(--hero-star-faint), transparent 55%),
+    radial-gradient(1px 1px at 310px 170px, var(--hero-star), transparent 55%),
+    radial-gradient(1px 1px at 60px 300px, var(--hero-star-faint), transparent 55%),
+    radial-gradient(1.5px 1.5px at 260px 280px, var(--hero-star-faint), transparent 55%),
+    radial-gradient(1px 1px at 190px 230px, var(--hero-star), transparent 55%);
+  background-size: 340px 340px, 340px 340px, 340px 340px, 340px 340px, 520px 520px, 520px 520px, 520px 520px, 520px 520px;
+  animation: twinkle 7s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+  padding: 4rem 0 3.5rem;
+}
+
+@media (min-width: $bp-md) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    padding: 5.5rem 0 5rem;
+  }
+}
+
+.hero__name {
+  font-size: var(--fs-2xl);
+  margin: 0 0 0.9rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: $bp-md) {
+  .hero__name {
+    font-size: 3.2rem;
+  }
+}
+
+.hero__thesis {
+  font-size: var(--fs-md);
+  color: var(--text);
+  max-width: 34em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.hero__fellowships {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.75rem;
+}
+
+.hero__visual {
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 0 40px var(--glow), var(--shadow);
+  }
+}
+
+.hero__visual-caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--faint);
+  margin-top: 0.65rem;
+  text-align: right;
+}
+
+// News strip
+.news {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev);
+}
+
+.news__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.75rem;
+  padding: 0.85rem 0;
+}
+
+.news__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.news__item {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+
+  time {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--faint);
+    margin-right: 0.5em;
+  }
+}

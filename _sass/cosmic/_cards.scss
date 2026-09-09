@@ -1,0 +1,258 @@
+// Cards: publications, research themes, software, generic.
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-soft);
+  }
+}
+
+// ---- Publications ----
+
+.pub-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 1.1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 0 24px var(--glow-2);
+  }
+}
+
+@media (min-width: $bp-sm) {
+  .pub-card--thumb {
+    grid-template-columns: 168px minmax(0, 1fr);
+  }
+}
+
+.pub-card__thumb {
+  align-self: start;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-strong);
+    background: var(--bg);
+  }
+}
+
+.pub-card__title {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  margin: 0 0 0.4rem;
+  line-height: 1.35;
+
+  a {
+    color: var(--text-strong);
+    border-bottom: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.pub-card__authors {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+
+  strong {
+    color: var(--text);
+  }
+}
+
+.pub-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.pub-card__excerpt {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+  line-height: 1.55;
+}
+
+.pub-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+
+  a {
+    color: var(--link);
+
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+}
+
+.pub-year {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--faint);
+  margin: 2.4rem 0 1.1rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+// ---- Research themes ----
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+}
+
+@media (min-width: $bp-sm) {
+  .themes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.theme-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 22px var(--glow);
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  p {
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+// ---- Software ----
+
+.software-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+}
+
+@media (min-width: $bp-sm) {
+  .software-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: $bp-lg) {
+  .software-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.software-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent-2);
+    box-shadow: 0 0 22px var(--glow-2);
+  }
+
+  h3 {
+    font-family: var(--font-mono);
+    font-size: var(--fs-base);
+    font-weight: 500;
+    margin: 0 0 0.45rem;
+
+    a {
+      color: var(--text-strong);
+      border-bottom: none;
+
+      &:hover {
+        color: var(--accent-2);
+      }
+    }
+  }
+
+  p {
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    margin: 0 0 0.6rem;
+    line-height: 1.55;
+  }
+}
+
+.software-card__links {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  display: flex;
+  gap: 1rem;
+}
+
+// ---- Feature card (BIND on homepage) ----
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: 0 0 34px var(--glow-2);
+}
+
+.feature-card__body {
+  h3 {
+    font-size: var(--fs-lg);
+    margin: 0 0 0.6rem;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+.feature-card__visual img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+}

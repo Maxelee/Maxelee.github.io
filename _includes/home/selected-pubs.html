@@ -1,0 +1,10 @@
+<section class="section" id="selected-work">
+  <div class="section__title">
+    <h2>Selected Work</h2>
+    <a class="section__link" href="/publications/">all publications →</a>
+  </div>
+  {% assign selected = site.publications | where: "selected", true | sort: "selected_order" %}
+  {% for pub in selected %}
+    {% include pub-card.html pub=pub %}
+  {% endfor %}
+</section>
