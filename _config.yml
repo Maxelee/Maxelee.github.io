@@ -99,7 +99,7 @@ social:
 # Analytics — GoatCounter (privacy-friendly: no cookies, no consent banner).
 # Sign up free at goatcounter.com, pick a code, and put it here to enable;
 # e.g. "maxelee" for the dashboard at maxelee.goatcounter.com.
-goatcounter              :
+goatcounter              : maxelee
 
 
 # Reading Files
