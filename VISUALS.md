@@ -1,8 +1,16 @@
 # Website visual briefs (cluster-side generation)
 
 Instructions for generating final artwork for maxelee.github.io on the cluster.
-The site currently uses interim figures extracted from the paper PDFs; anything
-generated from these briefs replaces them 1:1 (same filename → drop in, done).
+Anything generated from these briefs replaces the current asset 1:1 (same
+filename → drop in, done).
+
+> **Status (Sep 2026):** briefs 1, 2, and the methods teaser are DONE — the
+> talk_figs2 npz caches (task_a trajectory + task_b sweeps) were re-rendered
+> site-side in magma via `scripts/render_site_figs.py`, which also produced
+> animated flow-matching and parameter-sweep WebPs now on `/bind/`. Still
+> open: **#3 (lightcone κ/τ/y maps)** — the highest-value remaining item —
+> plus the optional #4/#5/#6b/#6c. New raw fields dropped as npz (same shapes
+> as the talk caches) can be re-rendered with the same script.
 
 **Global spec, applies to every asset:**
 

@@ -115,6 +115,7 @@ exclude:
   - LICENSE
   - README.md
   - VISUALS.md
+  - scripts
   - Rakefile
   - assets/js/_main.js
   - assets/js/plugins
