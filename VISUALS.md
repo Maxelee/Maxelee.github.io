@@ -19,8 +19,13 @@ filename → drop in, done).
 ### 7. Animation frames + real lightcone bands — highest value remaining
 
 - `lightcone-{tau,y}.png` from the REAL Popeye lightcone maps (per brief
-  #3) would replace the box-substitute τ/y bands in the homepage banner —
-  the κ band is already the genuine ray-traced map.
+  #3). **The y substitute was pulled from the homepage banner**: the
+  box-pasted per-halo version (≥10¹³ patches on an empty field) reads as
+  scattered bubbles, not the full integrated y sky. The banner currently
+  cycles κ → τ only; a real y map — full map, diffuse structure included,
+  same 5° style as the κ cache render — becomes the third band the moment
+  it lands (1500×1500, magma, log stretch). A real lightcone τ replaces
+  the gas-web stand-in at the same time.
 - `anim-fm-###.png` — every state of the cached flow-matching trajectory
   (CV sim_0 halo 2, the 20-Euler-step run used for trajectory-a/b/c; more
   steps even better), gas channel, 1000×1000, SAME pipeline as the
