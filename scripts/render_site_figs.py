@@ -105,7 +105,10 @@ def main():
     seq = [render(frames[-1, GAS], lo_g, hi_g, 640)] + [render(f, lo_g, hi_g, 640) for f in dense]
     save_anim(seq, [4500] + [40] * len(dense), f'{OUT}/hero-anim.webp', quality=70)
 
-    # Parameter sweeps (gas), ping-pong loops with holds at the ends
+    # Parameter sweeps (gas), ping-pong loops with holds at the ends.
+    # NOTE: the live site dials now use the crisp cluster-rendered
+    # ASN1/AAGN1 frame sets (images/bind/sweep-{sn,agn}.webp) instead of
+    # these 128^2 npz sweeps; this section is kept for reference.
     for name, fn in [('sweep-imf', 'task_b_IMFslope'),
                      ('sweep-wind', 'task_b_VarWindVelFactor')]:
         zb = np.load(f'{CACHE}/{fn}.npz')

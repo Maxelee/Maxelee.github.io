@@ -29,16 +29,16 @@ Applied halo-by-halo to full N-body volumes and ray-traced, BIND produces conver
 
 ## Turning the astrophysical dials
 
-BIND is conditioned on every IllustrisTNG galaxy formation parameter, so the same halo can be regenerated under different astrophysics. Here one parameter sweeps across its prior while everything else — including the initial noise — stays fixed:
+BIND is conditioned on every IllustrisTNG galaxy formation parameter, so the same halo can be regenerated under different astrophysics. Here the same dark-matter-only halo is painted while one feedback parameter sweeps across the full SB35 prior (cyan tick) with everything else — including the initial noise — held fixed:
 
 <div class="sweep-pair">
 <figure>
-<img src="/images/bind/sweep-wind.webp" alt="Animation of the same halo's gas field as the galactic wind velocity factor sweeps from 3.7 to 14.8" width="448" height="448">
-<figcaption>galactic wind velocity &times;3.7 &rarr; &times;14.8</figcaption>
+<img src="/images/bind/sweep-sn.webp" alt="Animation of the same halo's gas field as the supernova wind energy parameter sweeps across its prior, with a position indicator below" loading="lazy" width="600" height="634">
+<figcaption>A<sub>SN1</sub> &middot; galactic wind energy &middot; prior low &rarr; high</figcaption>
 </figure>
 <figure>
-<img src="/images/bind/sweep-imf.webp" alt="Animation of the same halo's gas field as the stellar initial mass function slope sweeps from minus 2.8 to minus 1.8" width="448" height="448">
-<figcaption>IMF slope &minus;2.8 &rarr; &minus;1.8</figcaption>
+<img src="/images/bind/sweep-agn.webp" alt="Animation of the same halo's gas field as the AGN radio feedback parameter sweeps across its prior, with a position indicator below" loading="lazy" width="600" height="634">
+<figcaption>A<sub>AGN1</sub> &middot; AGN radio feedback &middot; prior low &rarr; high</figcaption>
 </figure>
 </div>
 

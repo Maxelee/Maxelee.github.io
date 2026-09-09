@@ -4,20 +4,36 @@ Instructions for generating final artwork for maxelee.github.io on the cluster.
 Anything generated from these briefs replaces the current asset 1:1 (same
 filename → drop in, done).
 
-> **Status (Sep 2026): all briefs delivered.** The ~/Downloads/website drop
-> (with provenance.json — thank you) supplied everything: hero-field (25 Mpc/h
-> DM composite, now the reduced-motion hero fallback + /bind/ context),
-> og-field (social card), trajectory-a/b/c/truth (homepage strip),
-> lightcone-kappa (authentic z=1 map → lightcone paper teaser; the y/τ
-> "SUBSTITUTE-box50" renders are box-pasted, kept aside to avoid implying
-> they're lightcones), all three paper teasers, the gas-web box (banner on
-> /bind/), and the ensemble seeds (three-draws figure on /bind/).
-> favicon-halo was evaluated but reads as a fuzzy dot at 16 px — the cyan
-> monogram stays; say the word to swap anyway. The homepage hero itself is
-> the ANIMATED flow-matching loop (from the talk_figs2 trajectory npz,
-> 2× temporally interpolated, Lanczos, 25 fps — see
-> `scripts/render_site_figs.py`). Unused extras (channel maps, ASN1/AAGN1
-> sweeps, hero alts) remain in ~/Downloads/website if wanted later.
+> **Status (Sep 2026): stills all delivered and integrated** from the
+> ~/Downloads/website drop (hero-field → reduced-motion fallback + og card;
+> trajectory-a/b/c/truth → homepage strip; lightcone-kappa → lightcone
+> teaser; all paper teasers; gas-web banner + ensemble three-draws on
+> /bind/). The ASN1/AAGN1 8-frame sweeps are now assembled into the two
+> animated dials on /bind/ (crossfaded ping-pong + cyan prior-position
+> tick). favicon-halo reads as a fuzzy dot at 16 px — monogram kept.
+> **Remaining: brief #7 below** — high-res animation frames, so the
+> homepage hero and /bind/ generation loops can shed their soft 128²-npz
+> look the way the stills did.
+
+### 7. Animation frame sequences — NEW, highest value remaining
+
+The two generation animations (homepage hero, /bind/) are still rendered
+from the 128² talk_figs2 trajectory npz and look soft next to the new
+stills. Deliver PNG frame sequences rendered through the SAME pipeline as
+`trajectory-a/b/c` (same deposition/smoothing, shared color scale from the
+final state, `#070b14` floor, no chrome); assembly into animated WebP
+(interpolation, timing, loops) happens site-side:
+
+- `anim-fm-###.png` — every state of the cached flow-matching trajectory
+  (CV sim_0 halo 2, the 20-Euler-step run used for trajectory-a/b/c; more
+  steps even better), gas channel, 1000×1000. Replaces the hero and
+  /bind/ generation loops.
+- `anim-sweep-<PARAM>-##.png` — 16–24 prior values per parameter at
+  900×900 (same halo/seed/scale conventions as the ASN1/AAGN1 set).
+  ASN1 and AAGN1 first so the existing dials get smoother; any further
+  parameters (winds, IMF, AGN kinetic) become additional dials.
+- Optional: `anim-ensemble-##.png` — ~24 posterior draws of one halo
+  (the extra-ensemble cluster), for a "posterior flipbook" loop.
 
 **Global spec, applies to every asset:**
 
