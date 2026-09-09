@@ -1,9 +1,15 @@
-# Talks and presentations, newest first. Uncomment and fill in to populate /talks/.
-# Once real talks exist here, add Talks back to _data/navigation.yml.
-#
+# Talks and presentations, newest first.
+# Fields: title, date, venue, location (opt), type, url (opt: slides/recording)
+- title: "Impact of baryons on weak lensing statistics: diagnosing failures as a function of halo mass and radius"
+  date: 2026-03-12
+  venue: "CMB Group Meeting, University of Cambridge"
+  location: "Cambridge, UK"
+  type: "Seminar"
+  url: /files/talks/2026-03-12-impact-of-baryons-cambridge.pdf
+
 # - title: "Talk title"
 #   date: 2026-06-15
 #   venue: "Conference or institution"
 #   location: "City, Country"
 #   type: "Invited talk"   # Invited talk | Contributed talk | Seminar | Poster
-#   url: ""                # optional link to slides or recording
+#   url: ""

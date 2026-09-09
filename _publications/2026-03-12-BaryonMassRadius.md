@@ -11,6 +11,7 @@ selected_order: 3
 teaser: /images/pubs/baryon-mass-radius.webp
 paperurl: 'https://arxiv.org/abs/2603.11815'
 arxiv: 'https://arxiv.org/abs/2603.11815'
+slides: /files/talks/2026-03-12-impact-of-baryons-cambridge.pdf
 citation: 'M. E. Lee, Z. Haiman, S. Genel (2026) &quot;The impact of baryons on weak lensing statistics as a function of halo mass and radius.&quot; <i>arXiv:2603.11815</i>.'
 ---
 

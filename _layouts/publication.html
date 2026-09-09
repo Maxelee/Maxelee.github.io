@@ -15,6 +15,7 @@ layout: default
     <div class="btn-row">
       {% if page.paperurl %}<a class="btn btn--primary" href="{{ page.paperurl }}">Read the paper ↗</a>{% endif %}
       {% if page.arxiv and page.arxiv != page.paperurl %}<a class="btn" href="{{ page.arxiv }}">arXiv ↗</a>{% endif %}
+      {% if page.slides %}<a class="btn" href="{{ page.slides }}">Talk slides ↗</a>{% endif %}
     </div>
   </header>
 

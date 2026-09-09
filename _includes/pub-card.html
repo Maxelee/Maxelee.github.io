@@ -18,6 +18,7 @@
     <div class="pub-card__links">
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}">paper ↗</a>{% endif %}
       {% if pub.arxiv and pub.arxiv != pub.paperurl %}<a href="{{ pub.arxiv }}">arXiv ↗</a>{% endif %}
+      {% if pub.slides %}<a href="{{ pub.slides }}">slides ↗</a>{% endif %}
       <a href="{{ pub.url }}">details →</a>
     </div>
   </div>

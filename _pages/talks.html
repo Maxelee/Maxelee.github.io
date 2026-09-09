@@ -12,7 +12,7 @@ description: "Talks and presentations by Max E. Lee."
 <div class="pub-card__body">
 <h3 class="pub-card__title">{{ t.title }}</h3>
 <div class="pub-card__meta"><span class="chip">{{ t.type }}</span><span class="chip">{{ t.date | date: "%B %Y" }}</span>{% if t.location %}<span class="chip">{{ t.location }}</span>{% endif %}</div>
-<p class="pub-card__excerpt">{{ t.venue }}{% if t.url and t.url != "" %} · <a href="{{ t.url }}">slides/recording</a>{% endif %}</p>
+<p class="pub-card__excerpt">{{ t.venue }}{% if t.url and t.url != "" %} · <a href="{{ t.url }}">slides ↗</a>{% endif %}</p>
 </div>
 </div>
 {% endfor %}
