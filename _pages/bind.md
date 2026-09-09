@@ -17,6 +17,11 @@ teaser: /images/bind/hero-field.webp
 
 Applied halo-by-halo to full N-body volumes and ray-traced, BIND produces convergence, optical depth, and Compton-y maps whose statistics match full hydrodynamical simulations to within the precision of upcoming surveys. The trained models, generated halos, and map suites are released as open-source tools.
 
+<figure class="bind-wide">
+<img src="/images/bind/gas-web.webp" alt="A wide slice of a 50 Mpc/h simulation volume: BIND-generated gas pasted onto the halos of the dark-matter cosmic web" loading="lazy" width="1800" height="792">
+<figcaption>BIND gas pasted halo-by-halo into the dark-matter web of a 50 h⁻¹ Mpc volume.</figcaption>
+</figure>
+
 ## The papers
 
 - [BIND (Baryonic INpainting with Deep learning): A Field-level Emulator for Galaxy Groups and Clusters](/publication/2026-09-09-BIND-methods) — the model: training, validation, and halo-level performance. [Download PDF](/files/BIND_methods.pdf)
@@ -36,6 +41,13 @@ BIND is conditioned on every IllustrisTNG galaxy formation parameter, so the sam
 <figcaption>IMF slope &minus;2.8 &rarr; &minus;1.8</figcaption>
 </figure>
 </div>
+
+And because BIND is generative rather than deterministic, every draw is a new plausible realization — same halo, same parameters, three different draws:
+
+<figure class="bind-wide">
+<img src="/images/bind/ensemble.webp" alt="Three side-by-side BIND draws of the same halo with identical parameters, each showing different small-scale structure" loading="lazy" width="1552" height="512">
+<figcaption>one halo &middot; one parameter vector &middot; three independent draws</figcaption>
+</figure>
 
 ## Does it get the physics right?
 

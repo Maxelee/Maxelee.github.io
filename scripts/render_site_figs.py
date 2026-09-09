@@ -42,11 +42,24 @@ def stretch_from(ref):
     return np.percentile(pos, 5), np.percentile(pos, 99.9)
 
 
-def render(img, lo, hi, size=512):
+def render(img, lo, hi, size=512, resample=Image.LANCZOS):
     a = np.log10(np.clip(img, lo, hi))
     a = (a - np.log10(lo)) / (np.log10(hi) - np.log10(lo))
     rgb = (CMAP(a)[..., :3] * 255).astype(np.uint8)
-    return Image.fromarray(rgb).resize((size, size), Image.NEAREST)
+    return Image.fromarray(rgb).resize((size, size), resample)
+
+
+def densify(fields):
+    """2x temporal upsampling: blend midpoints between consecutive ODE
+    samples. The trajectory is one smooth path (shared noise realization),
+    so linear midpoints are faithful in-betweens; at 40 ms/frame this is
+    what makes the animations fluid instead of choppy."""
+    out = []
+    for i in range(len(fields) - 1):
+        out.append(fields[i])
+        out.append(0.5 * (fields[i] + fields[i + 1]))
+    out.append(fields[-1])
+    return out
 
 
 def save_anim(images, durations, out, quality=58):
@@ -79,23 +92,18 @@ def main():
         strip.paste(p, (i * (size + gap), 0))
     strip.save(f'{OUT}/trajectory-strip.png')
 
-    # Flow-matching animation (gas), long hold on the finished field
-    anim = [render(frames[i, GAS], lo_g, hi_g) for i in range(len(frames))]
-    dur = [60] * len(anim)
-    dur[-1] = 1800
-    save_anim(anim, dur, f'{OUT}/fm-gas.webp')
+    # Dense 25 fps flow-matching sequence (gas), shared by both animations
+    dense = densify([frames[i, GAS].astype(np.float64) for i in range(len(frames))])
+
+    # BIND-page animation: generation-first, hold on the finished field
+    anim = [render(f, lo_g, hi_g) for f in dense]
+    save_anim(anim, [40] * (len(anim) - 1) + [1800], f'{OUT}/fm-gas.webp', quality=68)
 
     # Homepage hero animation (-> images/bind/hero-anim.webp): the finished
-    # field comes FIRST with a long hold (so non-animating browsers show it),
-    # then noise -> generation, wrapping seamlessly back to the hold. The
-    # noisy first third is frame-thinned to keep the file small.
-    idx = [i for i in range(len(frames) - 1) if i >= 20 or i % 2 == 0]
-    seq = [render(frames[-1, GAS], lo_g, hi_g, 640)]
-    d = [4500]
-    for i in idx:
-        seq.append(render(frames[i, GAS], lo_g, hi_g, 640))
-        d.append(110 if i < 20 else 60)
-    save_anim(seq, d, f'{OUT}/hero-anim.webp')
+    # field comes FIRST with a long hold (so non-animating browsers show a
+    # halo, never noise), then noise -> generation wraps back to the hold.
+    seq = [render(frames[-1, GAS], lo_g, hi_g, 640)] + [render(f, lo_g, hi_g, 640) for f in dense]
+    save_anim(seq, [4500] + [40] * len(dense), f'{OUT}/hero-anim.webp', quality=70)
 
     # Parameter sweeps (gas), ping-pong loops with holds at the ends
     for name, fn in [('sweep-imf', 'task_b_IMFslope'),

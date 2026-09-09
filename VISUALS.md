@@ -4,13 +4,20 @@ Instructions for generating final artwork for maxelee.github.io on the cluster.
 Anything generated from these briefs replaces the current asset 1:1 (same
 filename → drop in, done).
 
-> **Status (Sep 2026):** briefs 1, 2, and the methods teaser are DONE — the
-> talk_figs2 npz caches (task_a trajectory + task_b sweeps) were re-rendered
-> site-side in magma via `scripts/render_site_figs.py`, which also produced
-> animated flow-matching and parameter-sweep WebPs now on `/bind/`. Still
-> open: **#3 (lightcone κ/τ/y maps)** — the highest-value remaining item —
-> plus the optional #4/#5/#6b/#6c. New raw fields dropped as npz (same shapes
-> as the talk caches) can be re-rendered with the same script.
+> **Status (Sep 2026): all briefs delivered.** The ~/Downloads/website drop
+> (with provenance.json — thank you) supplied everything: hero-field (25 Mpc/h
+> DM composite, now the reduced-motion hero fallback + /bind/ context),
+> og-field (social card), trajectory-a/b/c/truth (homepage strip),
+> lightcone-kappa (authentic z=1 map → lightcone paper teaser; the y/τ
+> "SUBSTITUTE-box50" renders are box-pasted, kept aside to avoid implying
+> they're lightcones), all three paper teasers, the gas-web box (banner on
+> /bind/), and the ensemble seeds (three-draws figure on /bind/).
+> favicon-halo was evaluated but reads as a fuzzy dot at 16 px — the cyan
+> monogram stays; say the word to swap anyway. The homepage hero itself is
+> the ANIMATED flow-matching loop (from the talk_figs2 trajectory npz,
+> 2× temporally interpolated, Lanczos, 25 fps — see
+> `scripts/render_site_figs.py`). Unused extras (channel maps, ASN1/AAGN1
+> sweeps, hero alts) remain in ~/Downloads/website if wanted later.
 
 **Global spec, applies to every asset:**
 
