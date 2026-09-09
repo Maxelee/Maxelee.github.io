@@ -11,27 +11,24 @@ filename → drop in, done).
 > /bind/). The ASN1/AAGN1 8-frame sweeps are now assembled into the two
 > animated dials on /bind/ (crossfaded ping-pong + cyan prior-position
 > tick). favicon-halo reads as a fuzzy dot at 16 px — monogram kept.
-> **Remaining: brief #7 below** — high-res animation frames, so the
-> homepage hero and /bind/ generation loops can shed their soft 128²-npz
-> look the way the stills did.
+> **Homepage hero is now the rotating lightcone banner** (κ → τ → y wide
+> bands crossfading in CSS; the flow-matching animation was removed from
+> the front page). **Remaining: brief #7 below**, which now serves the
+> /bind/ generation loop and banner upgrades.
 
-### 7. Animation frame sequences — NEW, highest value remaining
+### 7. Animation frames + real lightcone bands — highest value remaining
 
-The two generation animations (homepage hero, /bind/) are still rendered
-from the 128² talk_figs2 trajectory npz and look soft next to the new
-stills. Deliver PNG frame sequences rendered through the SAME pipeline as
-`trajectory-a/b/c` (same deposition/smoothing, shared color scale from the
-final state, `#070b14` floor, no chrome); assembly into animated WebP
-(interpolation, timing, loops) happens site-side:
-
+- `lightcone-{tau,y}.png` from the REAL Popeye lightcone maps (per brief
+  #3) would replace the box-substitute τ/y bands in the homepage banner —
+  the κ band is already the genuine ray-traced map.
 - `anim-fm-###.png` — every state of the cached flow-matching trajectory
   (CV sim_0 halo 2, the 20-Euler-step run used for trajectory-a/b/c; more
-  steps even better), gas channel, 1000×1000. Replaces the hero and
-  /bind/ generation loops.
+  steps even better), gas channel, 1000×1000, SAME pipeline as the
+  trajectory stills. Replaces the still-soft /bind/ generation loop
+  (currently 128² npz).
 - `anim-sweep-<PARAM>-##.png` — 16–24 prior values per parameter at
-  900×900 (same halo/seed/scale conventions as the ASN1/AAGN1 set).
-  ASN1 and AAGN1 first so the existing dials get smoother; any further
-  parameters (winds, IMF, AGN kinetic) become additional dials.
+  900×900 (same conventions as the ASN1/AAGN1 set) to make the /bind/
+  dials smoother; further parameters become additional dials.
 - Optional: `anim-ensemble-##.png` — ~24 posterior draws of one halo
   (the extra-ensemble cluster), for a "posterior flipbook" loop.
 

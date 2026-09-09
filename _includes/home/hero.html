@@ -19,12 +19,20 @@
         <a class="btn" href="mailto:{{ site.author.email }}">Email</a>
       </div>
     </div>
-    <div class="hero__visual">
-      <picture>
-        <source media="(prefers-reduced-motion: reduce)" srcset="/images/bind/hero-field.webp" type="image/webp">
-        <img src="/images/bind/hero-anim.webp" alt="Animation of BIND generating the gas field of a cluster-mass halo from pure noise via flow matching" width="640" height="640">
-      </picture>
-      <p class="hero__visual-caption">BIND generating a 10¹⁴ M⊙ halo's gas field from noise &middot; ~1&thinsp;s on a GPU</p>
+    <div class="lc-banner" role="img" aria-label="Rotating BIND-generated sky maps: weak-lensing convergence, optical depth, and Compton-y">
+      <div class="lc-banner__layer">
+        <img src="/images/lightcone/banner-kappa.webp" alt="" width="1600" height="500">
+        <span class="lc-banner__tag">convergence &kappa;</span>
+      </div>
+      <div class="lc-banner__layer">
+        <img src="/images/lightcone/banner-tau.webp" alt="" width="1600" height="500">
+        <span class="lc-banner__tag">optical depth &tau;</span>
+      </div>
+      <div class="lc-banner__layer">
+        <img src="/images/lightcone/banner-y.webp" alt="" width="1600" height="500">
+        <span class="lc-banner__tag">Compton-y</span>
+      </div>
     </div>
+    <p class="hero__visual-caption">the observables BIND generates &middot; weak lensing &amp; SZ maps across the IllustrisTNG prior</p>
   </div>
 </section>

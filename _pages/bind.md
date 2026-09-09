@@ -5,7 +5,7 @@ eyebrow: "Featured project"
 lede: "Baryonic INpainting with Deep learning — a conditional flow-matching model that paints baryons onto dark-matter-only simulations."
 permalink: /bind/
 description: "BIND (Baryonic INpainting with Deep learning): a conditional flow-matching model mapping dark-matter-only halos to full hydrodynamical fields, with a live GPU-backed explorer."
-teaser: /images/bind/hero-field.webp
+teaser: /images/bind/gas-web.webp
 ---
 
 <figure class="bind-hero">
