@@ -31,9 +31,9 @@ redirect_from:
 
 ## Teaching
 
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+{% for t in site.data.teaching %}
+- **{{ t.role }}** — {{ t.course }}, {{ t.venue }} ({{ t.term }})
+{% endfor %}
 
 ## Service & Leadership
 

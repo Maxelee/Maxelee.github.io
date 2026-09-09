@@ -1,0 +1,9 @@
+# Talks and presentations, newest first. Uncomment and fill in to populate /talks/.
+# Once real talks exist here, add Talks back to _data/navigation.yml.
+#
+# - title: "Talk title"
+#   date: 2026-06-15
+#   venue: "Conference or institution"
+#   location: "City, Country"
+#   type: "Invited talk"   # Invited talk | Contributed talk | Seminar | Poster
+#   url: ""                # optional link to slides or recording
