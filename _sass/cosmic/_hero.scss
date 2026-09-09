@@ -85,11 +85,9 @@
   margin-bottom: 1.75rem;
 }
 
-// Rotating lightcone banner: stacked map layers crossfading on a
-// pure-CSS cycle (6 s per observable, 0.7 s fades). Currently two layers
-// (kappa, tau) on a 12 s cycle; when the real Popeye Compton-y map lands
-// it becomes three layers — set the cycle to 18 s, delays 0/6/12, and
-// keyframe hold to 33.3%/38%.
+// Rotating lightcone banner: three stacked map layers (kappa, tau, y —
+// the real ray-traced trio, one realization) crossfading on a pure-CSS
+// 18 s cycle: 6 s per observable, ~0.7 s fades.
 .lc-banner {
   position: relative;
   margin-top: 2.75rem;
@@ -111,7 +109,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: lc-cycle 12s linear infinite;
+  animation: lc-cycle 18s linear infinite;
 
   img {
     width: 100%;
@@ -122,6 +120,10 @@
   &:nth-child(2) {
     animation-delay: 6s;
   }
+
+  &:nth-child(3) {
+    animation-delay: 12s;
+  }
 }
 
 @keyframes lc-cycle {
@@ -129,15 +131,15 @@
     opacity: 0;
   }
 
-  6% {
+  4% {
     opacity: 1;
   }
 
-  50% {
+  33.3% {
     opacity: 1;
   }
 
-  56% {
+  38% {
     opacity: 0;
   }
 

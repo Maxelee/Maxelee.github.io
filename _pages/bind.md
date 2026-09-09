@@ -9,8 +9,8 @@ teaser: /images/bind/gas-web.webp
 ---
 
 <figure class="bind-hero">
-<img src="/images/bind/fm-gas.webp" alt="Animation of flow matching: a gas field emerging from pure noise into a cluster-mass halo" width="512" height="512">
-<figcaption>Watch the generation itself: BIND integrates a learned velocity field from pure noise (t&thinsp;=&thinsp;0) to the finished gas field (t&thinsp;=&thinsp;1) of a 10¹⁴ M⊙ halo — about a second of GPU time.</figcaption>
+<img src="/images/bind/fm-gas.webp" alt="Animation of flow matching: a gas field emerging from pure noise into a cluster-mass halo" width="560" height="560">
+<figcaption>Watch the generation itself: BIND integrates a learned velocity field from pure noise (t&thinsp;=&thinsp;0) to the finished gas field (t&thinsp;=&thinsp;1) of a cluster-mass halo — about a second of GPU time.</figcaption>
 </figure>
 
 **BIND** (Baryonic INpainting with Deep learning) is a conditional flow-matching model trained on the 1024 paired hydrodynamical and dark-matter-only simulations of the CAMELS SB35 suite. Given a dark-matter-only halo, it generates the corresponding dark matter, gas, and stellar mass fields — conditioned on the full 35-dimensional ΛCDM and IllustrisTNG galaxy formation parameter space.

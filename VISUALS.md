@@ -16,26 +16,27 @@ filename → drop in, done).
 > the front page). **Remaining: brief #7 below**, which now serves the
 > /bind/ generation loop and banner upgrades.
 
-### 7. Animation frames + real lightcone bands — highest value remaining
+### 7. Animation frames — optional polish remaining
 
-- `lightcone-{tau,y}.png` from the REAL Popeye lightcone maps (per brief
-  #3). **The y substitute was pulled from the homepage banner**: the
-  box-pasted per-halo version (≥10¹³ patches on an empty field) reads as
-  scattered bubbles, not the full integrated y sky. The banner currently
-  cycles κ → τ only; a real y map — full map, diffuse structure included,
-  same 5° style as the κ cache render — becomes the third band the moment
-  it lands (1500×1500, magma, log stretch). A real lightcone τ replaces
-  the gas-web stand-in at the same time.
-- `anim-fm-###.png` — every state of the cached flow-matching trajectory
-  (CV sim_0 halo 2, the 20-Euler-step run used for trajectory-a/b/c; more
-  steps even better), gas channel, 1000×1000, SAME pipeline as the
-  trajectory stills. Replaces the still-soft /bind/ generation loop
-  (currently 128² npz).
+**Popeye drop (~/Downloads/website2) integrated:** the real ray-traced
+lightcone trio (κ / τ / y, one realization, z_s = 2.44) now powers the
+three-band homepage banner; the y-crop is the lightcone paper teaser;
+the crisper teaser-methods / teaser-bmr are live; og card rebuilt from
+the new og-field; the /bind/ generation loop is rebuilt from the
+extra-trajectory5 states (5 crisp 800² keyframes, crossfaded — much
+sharper than the old 128² npz loop). Unused riches (feedback groups,
+seeds, sevenfields strip, web input-vs-output pairs, hero alts) remain
+in ~/Downloads/website2 for future sections.
+
+Still worthwhile, none urgent:
+
+- `anim-fm-###.png` — ALL ~50 Euler states of a trajectory (not just 5),
+  1000², same pipeline: makes the /bind/ loop physically continuous
+  instead of crossfaded between 5 keyframes.
 - `anim-sweep-<PARAM>-##.png` — 16–24 prior values per parameter at
-  900×900 (same conventions as the ASN1/AAGN1 set) to make the /bind/
-  dials smoother; further parameters become additional dials.
-- Optional: `anim-ensemble-##.png` — ~24 posterior draws of one halo
-  (the extra-ensemble cluster), for a "posterior flipbook" loop.
+  900×900 (ASN1/AAGN1 conventions) for smoother dials.
+- Optional: `anim-ensemble-##.png` — ~24 draws of one halo for a
+  posterior flipbook.
 
 **Global spec, applies to every asset:**
 
