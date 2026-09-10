@@ -140,6 +140,38 @@
   }
 }
 
+// GPU warm-up interstitial (/explorer/)
+.launch-status {
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  box-shadow: 0 0 30px var(--glow);
+
+  p {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+  }
+}
+
+.launch-status__bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.launch-status__fill {
+  width: 2%;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
 .bind-hero img {
   max-width: 512px;
   margin: 0 auto;

@@ -116,6 +116,7 @@ exclude:
   - .sass-cache
   - CHANGELOG
   - Capfile
+  - cv-latex
   - Gemfile
   - Gruntfile.js
   - LICENSE

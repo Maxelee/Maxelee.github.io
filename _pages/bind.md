@@ -94,4 +94,4 @@ The explorer lets you tune cosmological and astrophysical parameters with slider
 <span>⚠️</span><span><strong>Note:</strong> the app runs on a cloud GPU and may take up to a minute to wake on first visit.</span>
 </div>
 
-<p><a href="https://maxelee--halo-explorer-haloserver-web.modal.run" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Launch the BIND Explorer ↗</a></p>
+<p><a href="/explorer/" target="_blank" rel="noopener" class="btn btn--primary">Launch the BIND Explorer ↗</a></p>

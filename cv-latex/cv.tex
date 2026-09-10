@@ -1,0 +1,252 @@
+% Curriculum Vitae — Max E. Lee
+% Format modeled on a modern academic CV (small-caps colored section heads,
+% lead/co-author publication split, narrative research-experience entries).
+% Compiles with pdflatex on a basic TeX Live (no titlesec/enumitem needed).
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% Palatino (mathpazo) where available — e.g. Overleaf / full TeX Live;
+% falls back to Latin Modern on a basic install.
+\IfFileExists{pplr8t.tfm}{\usepackage{mathpazo}}{\usepackage{lmodern}}
+\usepackage[margin=0.75in,top=0.65in,bottom=0.75in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true]{hyperref}
+
+% ------- palette (site brand: deep teal heads, cyan links) -------
+\definecolor{head}{RGB}{13,110,140}
+\definecolor{rulec}{RGB}{13,110,140}
+\definecolor{link}{RGB}{0,122,160}
+\definecolor{faint}{RGB}{95,105,115}
+\hypersetup{linkcolor=link,urlcolor=link,citecolor=link}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+
+% ------- section head: small caps + rule -------
+\newcommand{\cvsection}[1]{%
+  \vspace{1.05em}%
+  {\color{head}\large\scshape #1}\par
+  \vspace{-0.5em}{\color{rulec}\rule{\linewidth}{1.1pt}}\par
+  \vspace{0.15em}%
+}
+
+% ------- education / fellowship entry -------
+% \entry{bold left}{right dates}{italic sub left}{right location}
+\newcommand{\entry}[4]{%
+  \textbullet~\textbf{#1} \hfill {\itshape #2}\par
+  \hspace*{1.05em}{\itshape #3} \hfill #4\par
+  \vspace{0.25em}%
+}
+% variant with an extra detail line
+\newcommand{\entrydetail}[1]{\hspace*{1.05em}{\small #1}\par\vspace{0.25em}}
+
+% ------- numbered publication list -------
+\newenvironment{publist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{2.1em}%
+    \setlength{\labelwidth}{1.7em}%
+    \setlength{\labelsep}{0.4em}%
+    \setlength{\itemsep}{0.35em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0.2em}}%
+}{\end{list}}
+\newcommand{\pub}[1]{\item[{\small[#1]}]}
+
+% ------- plain bullet list, tight -------
+\newenvironment{tightlist}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.3em}%
+    \setlength{\itemsep}{0.3em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0.2em}}%
+}{\end{list}}
+
+\newcommand{\me}{\textbf{M.\,E.~Lee}}
+\newcommand{\ptitle}[2]{{\itshape\color{link}\href{#1}{#2}}}
+
+\begin{document}
+
+% =================== HEADER ===================
+\begin{center}
+  {\Huge\bfseries Max E. Lee}\\[0.35em]
+  {\bfseries PhD expected: 2027}\\[0.3em]
+  \href{mailto:max.e.lee@columbia.edu}{max.e.lee@columbia.edu} \,\textbar\,
+  \href{https://maxelee.github.io}{website} \,\textbar\,
+  \href{https://orcid.org/0000-0002-2318-3087}{ORCID} \,\textbar\,
+  \href{https://github.com/Maxelee}{GitHub}\\[0.3em]
+  Department of Astronomy, Columbia University, New York, NY, U.S.A.~--~10027
+\end{center}
+
+% =================== CURRENT POSITION ===================
+\cvsection{Current Position}
+\textbf{PhD Candidate in Astronomy, Columbia University, U.S.A.} \hfill {\itshape 2022 -- 2027 (expected)}\\
+NSF Graduate Research Fellow, advised by Zolt\'an Haiman (Columbia) and Shy Genel (Flatiron CCA).\\
+{\color{faint}\small Applying to postdoctoral positions beginning Fall 2027.}
+
+% =================== RESEARCH INTERESTS ===================
+\cvsection{Research Interests}
+My research asks how the messy physics of galaxy formation --- AGN feedback, galactic winds, gas
+cooling --- reshapes the matter distribution that upcoming weak-lensing surveys will measure, and how
+to model those effects well enough that they sharpen rather than spoil cosmological constraints. I work
+at three levels of modeling: full cosmological hydrodynamical simulations (\textsc{IllustrisTNG},
+\textsc{CAMELS}), reduced-variance Gaussian-process emulators (\textsc{CARPoolGP}), and field-level
+generative models (\textsc{BIND}, conditional flow matching), implemented in Python with
+GPU-accelerated deep-learning frameworks.
+
+Guided by the requirements of Stage-IV surveys --- Vera Rubin LSST, \textit{Euclid}, and
+\textit{Roman} --- I quantify baryonic and intrinsic-alignment systematics in Gaussian and
+non-Gaussian weak-lensing statistics (power spectra, peak counts, one-point PDFs, Minkowski
+functionals) and in SZ observables, and I release the tools and data publicly: trained emulators,
+generated halo fields, and a suite of 1000-realization ray-traced lensing and SZ lightcones spanning
+the full IllustrisTNG galaxy-formation prior.
+
+% =================== EDUCATION ===================
+\cvsection{Education}
+\entry{Columbia University}{2022 -- 2027 (expected)}{PhD in Astronomy; M.S. in Astronomy, 2024}{New York, U.S.A.}
+\entry{University of California, Berkeley}{2018 -- 2020}{B.A. in Astronomy \& Physics}{Berkeley, U.S.A.}
+\entry{Cabrillo College}{2016 -- 2018}{A.A. in Mathematics \& History}{Aptos, U.S.A.}
+
+% =================== FELLOWSHIPS & AWARDS ===================
+\cvsection{Fellowships \& Awards}
+\entry{NSF Graduate Research Fellowship}{2022 -- 2027}{Awarded by the U.S. National Science Foundation}{}
+\entry{National Osterbrock Leadership Fellowship}{2023 -- 2026}{Leadership-development program of the American Astronomical Society}{}
+\entry{Lead Teaching Fellowship}{2024 -- 2026}{Columbia University Center for Teaching \& Learning}{}
+\entry{Ted Bowen Memorial Endowed Scholarship}{2018}{Cabrillo College}{}
+
+% =================== PUBLICATIONS ===================
+\cvsection{Publications (hyperlinked titles) \,\textbar\,
+  \href{https://scholar.google.com/citations?user=WoStqzQAAAAJ}{Google Scholar} \,\textbar\,
+  \href{https://arxiv.org/a/lee_m_2.html}{arXiv}}
+
+{\color{head}\scshape Lead-Author Publications (6)}
+\begin{publist}
+  \pub{1} \me, S.~Genel, Z.~Haiman, G.~L.~Bryan, C.~C.~Lovell, B.~Hadzhiyska (2026),
+    \ptitle{https://maxelee.github.io/files/BIND_methods.pdf}{BIND (Baryonic INpainting with Deep learning): A Field-level Emulator for Galaxy Groups and Clusters},
+    submitted.
+  \pub{2} \me, S.~Genel, Z.~Haiman, G.~L.~Bryan, B.~Hadzhiyska (2026),
+    \ptitle{https://maxelee.github.io/files/BINDing_the_lightcone.pdf}{BINDing the lightcone: A suite of astrophysical ray-traced weak lensing and SZ maps},
+    submitted.
+  \pub{3} \me, Z.~Haiman, S.~Genel (2026),
+    \ptitle{https://arxiv.org/abs/2603.11815}{The impact of baryons on weak lensing statistics as a function of halo mass and radius},
+    arXiv:2603.11815.
+  \pub{4} \me, Z.~Haiman, S.~Pandey, S.~Genel (2026),
+    \ptitle{https://doi.org/10.3847/1538-4357/ae1ca7}{The effect of intrinsic alignments on weak lensing statistics in hydrodynamical simulations},
+    2026 \textbf{ApJ}, arXiv:2504.12460.
+  \pub{5} \me, S.~Genel, B.~D.~Wandelt, B.~Zhang, A.~M.~Delgado, et al. (2024),
+    \ptitle{https://doi.org/10.3847/1538-4357/ad3d4a}{Zooming by in the CARPool(GP) lane: new CAMELS-TNG simulations of zoomed-in massive halos},
+    2024 \textbf{ApJ}, arXiv:2403.10609.
+  \pub{6} \me, T.~Lu, Z.~Haiman, J.~Liu, K.~Osato (2023),
+    \ptitle{https://academic.oup.com/mnras/article/519/1/573/6884156}{Comparing weak lensing peak counts in baryonic correction models to hydrodynamical simulations},
+    2023 \textbf{MNRAS} 519, 573, arXiv:2201.08320.
+\end{publist}
+
+{\color{head}\scshape Co-Authored Publications (5)}
+\begin{publist}
+  \pub{1} C.~Lovell, \me, et al. (2026),
+    \ptitle{https://arxiv.org/abs/2604.17981}{Efficiently emulating distribution functions in gigaparsec volumes for varying cosmological parameters},
+    arXiv:2604.17981.
+  \pub{2} M.~Gebhardt, D.~Angl\'es-Alc\'azar, S.~Genel, D.~Nagai, \ldots, \me, et al. (2026),
+    \ptitle{https://doi.org/10.1093/mnras/stag525}{Cosmological back-reaction of baryons on dark matter in the CAMELS simulations},
+    2026 \textbf{MNRAS}.
+  \pub{3} E.~Hern\'andez-Mart\'inez, S.~Genel, F.~Villaescusa-Navarro, U.~P.~Steinwandel, \me, et al. (2025),
+    \ptitle{https://doi.org/10.3847/1538-4357/ada9e9}{Cosmological and Astrophysical Parameter Inference from Stacked Galaxy Cluster Profiles Using CAMELS-zoomGZ},
+    2025 \textbf{ApJ}.
+  \pub{4} V.~B\"ohm, Y.~Feng, \me, B.~Dai (2021),
+    \ptitle{https://www.sciencedirect.com/science/article/pii/S2213133721000445}{MADLens, a Package for Fast and Differentiable Non-Gaussian Lensing Simulations},
+    2021 \textbf{Astronomy \& Computing}, arXiv:2012.07266.
+  \pub{5} J.~S.~Dillon, \me, A.~R.~Parsons, et al. (2020),
+    \ptitle{https://doi.org/10.1093/mnras/staa3651}{Redundant-Baseline Calibration of the Hydrogen Epoch of Reionization Array},
+    2020 \textbf{MNRAS}, arXiv:2003.08399.
+\end{publist}
+
+% =================== RESEARCH EXPERIENCE ===================
+\cvsection{Research Experience}
+
+\textbullet~\textbf{Columbia University, PhD Candidate \& NSF Graduate Research Fellow}
+\hfill {\itshape New York, U.S.A., 2022 -- present}\par
+I develop field-level generative models of baryonic physics for Stage-IV lensing surveys. I created
+\textbf{\textit{BIND, a conditional flow-matching emulator}} that paints dark matter, gas, and stellar
+fields onto dark-matter-only halos across the full 35-dimensional CAMELS SB35 parameter space
+{\color{faint}(Lee et al. 2026a, submitted)}, and applied it halo-by-halo to N-body volumes to build a
+\textbf{\textit{public suite of 1000-realization ray-traced weak-lensing and SZ lightcones}} spanning
+the IllustrisTNG galaxy-formation prior {\color{faint}(Lee et al. 2026b, submitted)}, with a live
+explorer running inference on a cloud GPU. I diagnosed the
+\textbf{\textit{critical halo mass and radius scales}} that baryon-correction models must capture
+{\color{faint}(Lee et al. 2026, arXiv:2603.11815)} and quantified
+\textbf{\textit{intrinsic-alignment contamination of non-Gaussian lensing statistics}}
+{\color{faint}(Lee et al. 2026, ApJ)}. I also developed \textbf{\textit{CARPoolGP}}, a reduced-variance
+emulation method, and used it to extend CAMELS with 768 zoom-in simulations of massive halos
+{\color{faint}(Lee et al. 2024, ApJ)}.
+
+\textbullet~\textbf{Columbia Astrophysics Laboratory, Research Assistant}
+\hfill {\itshape New York, U.S.A., 2021 -- 2022}\par
+I tested semi-analytic \textbf{\textit{baryonic correction models against full hydrodynamical
+simulations}} at the level of weak-lensing peak counts, across the noise levels of DES, KiDS, HSC,
+LSST, \textit{Roman}, and \textit{Euclid}, identifying where they suffice and where they break for
+non-Gaussian statistics {\color{faint}(Lee et al. 2023, MNRAS)}.
+
+\textbullet~\textbf{Berkeley Center for Cosmological Physics, Research Assistant}
+\hfill {\itshape Berkeley, U.S.A., 2021}\par
+I contributed to \textbf{\textit{MADLens}}, a fully differentiable particle-mesh package for
+non-Gaussian lensing simulations designed as a forward model for derivative-aided Bayesian inference
+{\color{faint}(B\"ohm et al. 2021, Astronomy \& Computing)}.
+
+\textbullet~\textbf{University of California, Berkeley, Undergraduate Researcher}
+\hfill {\itshape Berkeley, U.S.A., 2018 -- 2020}\par
+With the HERA collaboration, I worked on \textbf{\textit{redundant-baseline calibration}} of the
+Hydrogen Epoch of Reionization Array, quantifying the impact of real-world non-redundancy on 21\,cm
+calibration solutions {\color{faint}(Dillon, Lee, et al. 2020, MNRAS)}.
+
+% =================== SOFTWARE & DATA ===================
+\cvsection{Open-Source Software \& Data Products}
+\begin{tightlist}
+  \item \textbf{BIND} --- trained flow-matching models, generated halo fields, and a live GPU-backed
+    halo explorer; \textbf{BIND lightcone suite} --- ray-traced convergence, optical-depth, and
+    Compton-$y$ maps (1000 realizations $\times$ 5 source redshifts) across the IllustrisTNG prior.
+  \item \textbf{CARPoolGP} --- Gaussian-process regression with control variates for reduced-variance
+    emulation from expensive simulation suites.
+  \item \textbf{BCM\_lensing} --- baryon-correction-model pipeline for weak-lensing convergence maps
+    and peak-count statistics.
+  \item \textbf{hydro\_replace} --- particle-level replacement of dark-matter-only halos with their
+    hydrodynamical counterparts.
+  \item \textbf{STAR\_emu}, \textbf{cosmoANP}, \textbf{zoomGZ} --- stellar-to-halo-mass emulator;
+    attentive neural processes for cosmological inference; zoom-in simulation-suite management.
+\end{tightlist}
+
+% =================== TALKS ===================
+\cvsection{Talks}
+\begin{tightlist}
+  \item Seminar, CMB group meeting, University of Cambridge, U.K.:
+    \textit{The impact of baryons on weak lensing statistics: diagnosing failures as a function of
+    halo mass and radius}, {\itshape March 2026}.
+\end{tightlist}
+
+% =================== TEACHING & MENTORSHIP ===================
+\cvsection{Teaching \& Mentorship Experience}
+\begin{tightlist}
+  \item \textbf{Lead Teaching Fellow}, Center for Teaching \& Learning, Columbia University ---
+    pedagogy programming and workshops for graduate-student instructors, {\itshape 2024 -- 2026}.
+  \item \textbf{Instructor of record}, Undergraduate Astronomy Lab, Department of Astronomy,
+    Columbia University, {\itshape Fall 2023 and Spring 2024}.
+  \item \textbf{Teaching assistant}, Theories of the Universe: From Babylon to the Big Bang,
+    Columbia University, {\itshape Spring 2023}.
+  \item \textbf{Teaching assistant}, Introduction to Astronomy I, Columbia University,
+    {\itshape Fall 2022}.
+  \item \textbf{Research mentor}, ULAB 21\,cm Cosmology Group, UC Berkeley,
+    {\itshape 2019 -- 2020}.
+  \item \textbf{Undergraduate mentor}, Foundational Course for Physical Science Transfers,
+    UC Berkeley, {\itshape 2019 \& 2020}.
+\end{tightlist}
+
+% =================== SERVICE & OUTREACH ===================
+\cvsection{Service \& Outreach}
+\begin{tightlist}
+  \item \textbf{Astronomy Youth Outreach Coordinator}, Department of Astronomy, Columbia University,
+    {\itshape 2023 -- present}.
+  \item \textbf{STEM Coach}, Columbia School of General Studies, {\itshape January -- June 2024}.
+\end{tightlist}
+
+\end{document}

@@ -82,7 +82,21 @@
   font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.hero__market {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  letter-spacing: 0.02em;
   margin-bottom: 1.75rem;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
 }
 
 // Rotating lightcone banner: three stacked map layers (kappa, tau, y —

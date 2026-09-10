@@ -14,3 +14,8 @@ vendor/
 # Ingore files created by npm
 node_modules
 package-lock.json
+# LaTeX build artifacts (CV source lives in cv-latex/)
+cv-latex/*.aux
+cv-latex/*.log
+cv-latex/*.out
+cv-latex/*.pdf
